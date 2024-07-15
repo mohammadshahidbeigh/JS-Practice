@@ -8,7 +8,7 @@ document.querySelector("#app").innerHTML = `
     </a>
     <h1>Hello Developers!</h1>
     <h2>Welcome! My name is Shahid.</h2>
-    <h3>and this development environment contains JavaScript problem-solving exercises for practice.</h3>
+    <h3>This development environment contains JavaScript problem-solving exercises for practice.</h3>
   </div>
 `;
 
