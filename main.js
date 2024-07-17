@@ -135,3 +135,106 @@ console.log(johnsBMI_2);
 
 const markHigherBMI_2 = marksBMI_2 > johnsBMI_2;
 console.log(markHigherBMI_2);
+
+// Fourth Basic Program _ Strings and Template Literals ES6
+
+const realname = "Shahid";
+const role = "Developer";
+const birthYear = 2001;
+const year = 2024;
+
+const shahid =
+  "Hi! My name is" +
+  " " +
+  realname +
+  " and  my job " +
+  " is a " +
+  role +
+  " and " +
+  "my birthyear is" +
+  " " +
+  birthYear +
+  " and now in " +
+  year;
+console.log(shahid);
+
+const shahidtemps = `Hi! My name is ${realname} and my job is a ${role} and my birthyear is ${birthYear} and now in ${year}`;
+console.log(shahidtemps);
+
+console.log(`Just a regular string...`);
+console.log(`String \n with \n a \n new \n line`);
+console.log(`String with
+multiple
+lines`);
+
+// Fifth Basic Program _ If / Else Statements
+
+const age = 9;
+const ageRequired = 18;
+
+if (age >= ageRequired) {
+  console.log(`You are eligible for driving a Bugatti 🚗`);
+} else console.log(`You are eligible for driving a Cycle 🚲😁`);
+
+const love = "1billion";
+const loveRequired = "1Billion";
+
+if (love === loveRequired) {
+  console.log(`You are eligible for marriage 💍`);
+} else console.log(`Work Harder to Become Billionare⚡`);
+
+/*
+The Complete JavaScript Course 6
+Coding Challenge #2
+Use the BMI example from Challenge #1, and the code you already wrote, and
+improve it.
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message
+is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
+BMI (28.3) is higher than John's (23.9)!"
+Hint: Use an if/else statement 😉
+GOOD LUCK */
+
+// solution for Data 1
+
+const marksMasss = 78;
+const marksHeightt = 1.69;
+
+const johnsMasss = 92;
+const johnsHeightt = 1.95;
+
+console.log(marksMasss, marksHeightt);
+console.log(johnsMasss, johnsHeightt);
+
+const markssBMI = marksMasss / (marksHeightt * marksHeightt);
+console.log(markssBMI);
+const johnssBMI = johnsMasss / (johnsHeightt * johnsHeightt);
+console.log(johnssBMI);
+
+if (markssBMI > johnssBMI) {
+  console.log(`Marks BMI ${markssBMI} is higher than Johns BMI ${johnssBMI}`);
+} else console.log(`Johns BMI ${johnssBMI} is higher than Marks ${markssBMI}`);
+
+// solution for Data 2
+
+const marrksMasss = 95;
+const marrksHeightt = 1.88;
+
+const joohnsMasss = 85;
+const joohnsHeightt = 1.76;
+
+console.log(marrksMasss, marrksHeightt);
+console.log(joohnsMasss, joohnsHeightt);
+
+const marrkssBMI = marrksMasss / (marrksHeightt * marrksHeightt);
+console.log(marrkssBMI);
+const joohnssBMI = joohnsMasss / (joohnsHeightt * joohnsHeightt);
+console.log(joohnssBMI);
+
+if (marrkssBMI > joohnssBMI) {
+  console.log(`Marks BMI ${marrkssBMI} is higher than Johns BMI ${joohnssBMI}`);
+} else
+  console.log(`Johns BMI ${joohnssBMI} is higher than Marks ${marrkssBMI}`);
+
+// Sixth Basic Program _ Type Conversion and Coercion
