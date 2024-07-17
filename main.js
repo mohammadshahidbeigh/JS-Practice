@@ -15,8 +15,123 @@ document.querySelector("#app").innerHTML = `
 // First Basic Program
 
 let Js = "Pro Shahid";
-if (Js === "Pro Shahid") alert("Hello Shahid");
+// if (Js === "Pro Shahid") alert("Hello Shahid");
 
 console.log(45 + 65 + 80);
 
-// Second Basic Program
+// Second Basic Program _ Data Types
+// Number , String , Boolean , Undefined , Null , Symbol, BigInt.
+
+let firstNum = 27;
+console.log(firstNum);
+console.log(typeof firstNum);
+
+let secondString = "27";
+console.log(secondString);
+console.log(typeof secondString);
+
+const thirdBoolean = true;
+console.log(thirdBoolean);
+console.log(typeof thirdBoolean);
+
+let fourthUndefined;
+console.log(fourthUndefined);
+console.log(typeof fourthUndefined);
+
+let fifthNull = null;
+console.log(fifthNull);
+console.log(typeof fifthNull);
+
+const sixthSymbol = Symbol("Shahid");
+console.log(sixthSymbol);
+console.log(typeof sixthSymbol);
+
+const seventhBigInt = 1234567890123456789012345678901234567890n;
+console.log(seventhBigInt);
+console.log(typeof seventhBigInt);
+
+// Third Basic Program _ Operators
+
+const firstName = "Moahmmad";
+const lastName = "Shahid";
+console.log(firstName + " " + lastName);
+
+let x = 20;
+let y = 10;
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+
+const Now = 2024;
+const agaBorn = 2001;
+console.log(Now - agaBorn);
+
+const ageNow = 2024;
+const ageShahid = ageNow - 2001;
+const ageShahida = ageNow - 2002;
+console.log(ageShahid, ageShahida);
+console.log(ageShahida > ageShahid);
+console.log(ageShahida < ageShahid);
+console.log(ageShahida === ageShahid);
+
+const isFullage = ageShahida >= 18;
+console.log(isFullage);
+
+/*
+JavaScript Fundamentals – Part 1
+Coding Challenge #1
+Mark and John are trying to compare their BMI (Body Mass Index), which is
+calculated using the formula:
+BMI = mass / height ** 2 = mass / (height * height) (mass in kg
+and height in meter).
+Your tasks:
+1. Store Mark's and John's mass and height in variables
+2. Calculate both their BMIs using the formula (you can even implement both
+versions)
+3. Create a Boolean variable 'markHigherBMI' containing information about
+whether Mark has a higher BMI than John.
+Test data:
+§ Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95
+m tall.
+§ Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
+m tall.
+GOOD LUCK 😀 */
+
+// solution for Data 1
+
+const marksMass = 78;
+const marksHeight = 1.69;
+
+const johnsMass = 92;
+const johnsHeight = 1.95;
+
+console.log(marksMass, marksHeight);
+console.log(johnsMass, johnsHeight);
+
+const marksBMI = 78 / (1.69 * 1.69);
+console.log(marksBMI);
+
+const johnsBMI = 92 / (1.95 * 1.95);
+console.log(johnsBMI);
+
+const markHigherBMI = marksBMI > johnsBMI;
+console.log(markHigherBMI);
+
+// solution for Data 2
+
+const marksMass_2 = 95;
+const marksHeight_2 = 1.88;
+
+const johnsMass_2 = 85;
+const johnsHeight_2 = 1.76;
+
+console.log(marksMass_2, marksHeight_2);
+console.log(johnsMass_2, johnsHeight_2);
+
+const marksBMI_2 = 95 / (1.88 * 1.88);
+console.log(marksBMI_2);
+const johnsBMI_2 = 85 / (1.76 * 1.76);
+console.log(johnsBMI_2);
+
+const markHigherBMI_2 = marksBMI_2 > johnsBMI_2;
+console.log(markHigherBMI_2);
