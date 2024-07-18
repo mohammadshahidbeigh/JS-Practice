@@ -380,3 +380,28 @@ if (
 } else if (teamDolphins_avg_Score_Bonus1 === teamKoalas_avg_Score_Bonus1) {
   console.log(`Match draw`);
 } else console.log(`Koalas win the trophy 🏆`);
+
+// Data Bonus 2
+const teamDolphins_avg_Score_Bonus2 = (97 + 112 + 101) / 3;
+const teamKoalas_avg_Score_Bonus2 = (109 + 95 + 106) / 3;
+if (
+  teamDolphins_avg_Score_Bonus2 > teamKoalas_avg_Score_Bonus2 &&
+  teamDolphins_avg_Score_Bonus2 >= 100
+) {
+  console.log(`Dolphins win the trophy 🏆`);
+}
+if (
+  teamDolphins_avg_Score_Bonus2 === teamKoalas_avg_Score_Bonus2 &&
+  teamDolphins_avg_Score_Bonus2 >= 100 &&
+  teamKoalas_avg_Score_Bonus2 >= 100
+) {
+  console.log(`Match draw`);
+}
+if (
+  teamDolphins_avg_Score_Bonus2 < teamKoalas_avg_Score_Bonus2 &&
+  teamKoalas_avg_Score_Bonus2 >= 100
+) {
+  console.log(`Koalas win the trophy 🏆`);
+}
+
+// Tenth Basic Program _ Switch Statement
