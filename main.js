@@ -238,3 +238,31 @@ if (marrkssBMI > joohnssBMI) {
   console.log(`Johns BMI ${joohnssBMI} is higher than Marks ${marrkssBMI}`);
 
 // Sixth Basic Program _ Type Conversion and Coercion
+
+const numi = "36";
+console.log(numi);
+console.log(typeof numi);
+console.log(Number(numi));
+console.log(typeof Number(numi));
+
+const namu = 36;
+console.log(namu);
+console.log(typeof namu);
+console.log(String(namu));
+console.log(typeof String(namu));
+
+// type coercion
+
+const typo = "44";
+
+console.log(`I'm typo a ${typo} years old`);
+console.log("I'm 36" + typo + 84);
+console.log("I'm 44" - "36");
+console.log("23" - 9 - "10");
+console.log(24 / 2);
+
+let n = "1" + 1;
+n = n - 1;
+console.log(n);
+
+// Seventh Basic Program _ Truthy and Falsy Values
