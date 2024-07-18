@@ -266,3 +266,117 @@ n = n - 1;
 console.log(n);
 
 // Seventh Basic Program _ Truthy and Falsy Values
+
+// 5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(""));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+console.log(Boolean(""));
+console.log(Boolean({}));
+console.log(Boolean([]));
+
+const money = 0;
+if (money) {
+  console.log("Don't spend it all 😁");
+} else console.log("You should get a job!");
+
+const moneyy = 100;
+if (moneyy) {
+  console.log("Don't spend it all 😁");
+} else console.log("You dont have money");
+
+let height = " ";
+
+if (height) {
+  console.log("Yay! Height is defined");
+} else console.log("You are too short bz 0 is falsy value");
+
+let heightt;
+
+if (heightt) {
+  console.log("Yay! Height is defined");
+} else console.log("You are too short bz you are undefined");
+
+// Eighth Basic Program _ Equality Operators: == vs. ===
+
+const length = 20;
+if (length == 20) console.log("Its 20");
+
+const width = "20";
+if (width === 20) console.log("Its 20 again!");
+else console.log("Its not 20");
+
+// const check = Number(prompt("What is your number"));
+// if (check !== 30) {
+//   console.log("why not 30");
+// } else console.log("its 30");
+
+// const checko = prompt("What is your number");
+// if (checko !== "30") {
+//   console.log("why not 30");
+// } else console.log("its 30");
+
+// Ninth Basic Program _ Logical Operators
+
+const hasdrivingLicence = true;
+const hasGoodVision = true;
+const isTired = true;
+
+if (hasdrivingLicence && hasGoodVision) {
+  console.log("Shahid can drive a car");
+}
+if (hasdrivingLicence || hasGoodVision) {
+  console.log("Again Shahid can drive a car");
+}
+if (hasdrivingLicence && hasGoodVision && !isTired) {
+  console.log("Shahid can not drive a car");
+} else console.log("Shahid should learn how to drive a car");
+
+/*
+The Complete JavaScript Course 7
+Coding Challenge #3
+There are two gymnastics teams, Dolphins and Koalas. They compete against each
+other 3 times. The winner with the highest average score wins a trophy!
+Your tasks:
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition,
+and print it to the console. Don't forget that there can be a draw, so test for that
+as well (draw means they have the same average score)
+3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a
+team only wins if it has a higher score than the other team, and the same time a
+score of at least 100 points. Hint: Use a logical operator to test for minimum
+score, as well as multiple else-if blocks 😉
+4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when
+both teams have the same score and both have a score greater or equal 100
+points. Otherwise, no team wins the trophy
+Test data:
+§ Data 1: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+§ Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+§ Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+GOOD LUCK 😀 */
+
+// Data 1
+
+const teamDolphins_avg_Score = (96 + 108 + 89) / 3;
+const teamKoalas_avg_Score = (88 + 91 + 110) / 3;
+
+if (teamDolphins_avg_Score > teamKoalas_avg_Score) {
+  console.log(`Dolphins win the trophy 🏆`);
+} else if (teamDolphins_avg_Score === teamKoalas_avg_Score) {
+  console.log(`Match draw`);
+} else console.log(`Koalas win the trophy 🏆`);
+
+// Data Bonus 1
+const teamDolphins_avg_Score_Bonus1 = (97 + 112 + 101) / 3;
+const teamKoalas_avg_Score_Bonus1 = (109 + 95 + 123) / 3;
+if (
+  teamDolphins_avg_Score_Bonus1 > teamKoalas_avg_Score_Bonus1 &&
+  teamDolphins_avg_Score_Bonus1 >= 100
+) {
+  console.log(`Dolphins win the trophy 🏆`);
+} else if (teamDolphins_avg_Score_Bonus1 === teamKoalas_avg_Score_Bonus1) {
+  console.log(`Match draw`);
+} else console.log(`Koalas win the trophy 🏆`);
