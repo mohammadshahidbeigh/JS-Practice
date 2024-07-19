@@ -508,3 +508,66 @@ console.log(
     billvalue2 + tip2
   }`
 );
+
+// Functions, Arrays, Objects and Loops
+
+// Functions
+// Function Declaration
+function calcAge1(birthYear1) {
+  // birthyear = parameter
+  return 2024 - birthYear1;
+}
+const age1 = calcAge1(2001); // calcAge1 2001 = argument
+console.log(age1);
+
+// Function Expression
+const calcAge2 = function (birthYear2) {
+  return 2024 - birthYear2;
+};
+const age2 = calcAge2(2001);
+console.log(age2);
+
+// Arrow Function
+const calcAge3 = (birthYear) => 2024 - birthYear;
+const age3 = calcAge3(2001);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear) => {
+  const age = 2024 - birthYear;
+  const retirement = 65 - age;
+  return retirement;
+};
+console.log(yearsUntilRetirement(2001));
+
+const yearsUntilRetirements = (birthYear, firstName) => {
+  const age = 2024 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement} years`;
+};
+console.log(yearsUntilRetirements(2001, "Shahid"));
+console.log(yearsUntilRetirements(2002, "Shahida"));
+
+// DRY Example Normal Expression Function
+const cutFruitPieces = function (fruits) {
+  return fruits * 4;
+};
+
+const fruitProcessor = function (apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+  const juice = `Juice with ${applePieces} apple pieces and ${orangePieces} orange pieces`;
+  return juice;
+};
+
+console.log(fruitProcessor(3, 4));
+
+// DRY Exapmle in Arrow Function
+const cutFruitPieces2 = (fruits) => fruits * 4;
+
+const fruitProcessor2 = (apples, oranges) => {
+  const applePiecess = cutFruitPieces2(apples);
+  const orangePiecess = cutFruitPieces2(oranges);
+  const juice = `Juice with ${applePiecess} apple pieces and ${orangePiecess} orange pieces`;
+  return juice;
+};
+console.log(fruitProcessor2(2, 3));
