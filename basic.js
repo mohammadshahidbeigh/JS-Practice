@@ -405,3 +405,106 @@ if (
 }
 
 // Tenth Basic Program _ Switch Statement
+
+const week = "second week";
+
+switch (week) {
+  case "first week":
+    console.log("1");
+    break;
+  case "second week":
+    console.log("2");
+    break;
+  case "third week":
+    console.log("3");
+    break;
+  default:
+    console.log("Not a valid week");
+}
+
+const month = "sixth month";
+switch (month) {
+  case "first month":
+    console.log("1");
+    break;
+  case "second month":
+    console.log("2");
+    break;
+  default:
+    console.log("Not a valid month");
+}
+
+// Eleventh Basic Program _ Statements and Expressions
+
+// Statements
+// 3 + 4;
+// 1991;
+// true && false && !true;
+// if (23 > 10) {
+//   const str = "23 is bigger";
+// }
+// Expressions
+// const me = "Shahida";
+// const job = "Developer";
+// const birthYearr = 2001;
+// const yearr = 2024;
+// const shahida =
+//   "I'm a " + job + " and I'm " + (yearr - birthYearr) + " years old";
+
+// Twelveth Basic Program _ The Conditional (Ternary) Operator______________________IMPORTANT
+
+const agee = 23;
+agee >= 15 ? console.log("I'm an adult") : console.log("I'm a little boy");
+
+const agee1 = 23;
+const drink = agee1 >= 18 ? "halal wine 🍷" : "water 💧";
+console.log(drink);
+
+const agee2 = 16;
+const drink2 =
+  agee2 >= 18
+    ? `He can drink halal wine bz he is ${agee2} years old`
+    : ` He can not drink halal wine bz he is ${agee2} years old`;
+console.log(drink2);
+
+// Thirteenth Basic Program _ Coding Challenge #4
+/*
+The Complete JavaScript Course 8
+Coding Challenge #4
+Steven wants to build a very simple tip calculator for whenever he goes eating in a
+restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and
+300. If the value is different, the tip is 20%.
+Your tasks:
+1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for
+this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can
+start with an if/else statement, and then try to convert it to a ternary
+operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value
+(bill + tip). Example: “The bill was 275, the tip was 41.25, and the total value
+316.25”
+Test data:
+§ Data 1: Test for bill values 275, 40 and 430
+Hints:
+§ To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+§ Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+GOOD LUCK 😀 */
+
+// Data 1
+const billvalue1 = 275;
+const tip1 =
+  billvalue1 >= 50 && billvalue1 <= 300 ? billvalue1 * 0.15 : billvalue1 * 0.2;
+
+console.log(
+  `The bill was ${billvalue1}, the tip was ${tip1}, and the total value ${
+    billvalue1 + tip1
+  }`
+);
+
+const billvalue2 = 40;
+const tip2 =
+  billvalue2 >= 50 && billvalue2 <= 300 ? billvalue2 * 0.15 : billvalue2 * 0.2;
+console.log(
+  `The bill was ${billvalue2}, the tip was ${tip2}, and the total value ${
+    billvalue2 + tip2
+  }`
+);
