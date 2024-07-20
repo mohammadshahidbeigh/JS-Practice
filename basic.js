@@ -905,3 +905,5 @@ const calcAverage = (arr) => {
   return sum / arr.length;
 };
 console.log(calcAverage(total2));
+
+//that's all!
