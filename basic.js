@@ -640,6 +640,7 @@ const checkWinner2 = (avgDolphins, avgKoalas) => {
 checkWinner2();
 
 // Arrays
+
 const friends = ["Shahid", "Shahida", "Hena"];
 console.log(friends);
 console.log(friends.length);
@@ -796,3 +797,84 @@ mark.calcBMI() > john.calcBMI()
   : console.log(
       `"John's BMI ${john.calcBMI()} is higher than Mark's ${mark.calcBMI()}`
     );
+
+// Loops
+// for loop
+for (let rep = 0; rep <= 5; rep++) {
+  console.log(`Lifting weights repetition ${rep}`);
+}
+
+const years = ["2001", "2002", 2003, "2003", "2004", 2005, 2006];
+const ages = [];
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(years.length);
+console.log(ages);
+
+// continue
+console.log("----ONLY STRINGS----");
+for (let i = 0; i < years.length; i++) {
+  if (typeof years[i] !== "string") continue;
+  console.log(years[i], typeof years[i]);
+}
+// break
+console.log("----BREAK WITH NUMBER----");
+for (let i = 0; i < years.length; i++) {
+  if (typeof years[i] === "number") break;
+  console.log(years[i], typeof years[i]);
+}
+
+// backwards
+for (let i = years.length - 1; i >= 0; i--) {
+  console.log(i, years[i]);
+}
+
+// loop inside a loop
+for (let circle = 1; circle <= 3; circle++) {
+  console.log(`THIS IS A ${circle} CIRCLE `);
+  for (let dot = 1; dot <= 2; dot++) {
+    console.log(`there are ${dot} no of dots inside the cirlce`);
+  }
+}
+
+// while loop
+let repp = 1;
+while (repp <= 5) {
+  console.log(`Repeat this without using repp++ ${repp} 😂`);
+  repp++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1; // doesnt really depends on hardcoded counter variable like in this case.
+console.log(dice);
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("You rolled a 6");
+}
+
+/*Coding Challenge #4
+Let's improve Steven's tip calculator even more, this time using loops!
+Your tasks:
+1. Create an array 'bills' containing all 10 test bill values
+2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate
+tips and total values (bill + tip) for every bill value in the bills array. Use a for
+loop to perform the 10 calculations!
+Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+Hints: Call ‘calcTip ‘in the loop and use the push method to add values to the
+tips and totals arrays �*/
+
+const bills2 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips2 = [];
+const total2 = [];
+for (let i = 0; i < bills2.length; i++) {
+  const calcTip = (bill) => {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  };
+  tips2.push(calcTip(bills2[i]));
+  total2.push(bills2[i] + tips2[i]);
+}
+console.log(bills2);
+console.log(tips2);
+console.log(total2);
