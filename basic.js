@@ -950,4 +950,18 @@ const printForecast2 = arr2 => {
 };
 printForecast2(arr2);
 
+// OR
+console.log('----OR----');
+const temperatures = [17, 21, 23]; // Data 1
+const temperatures2 = [12, 5, -5, 0, 4]; // Data 2
+
+const printForecastt = arr => {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(`... ${arr[i]}°C in ${i + 1} days`);
+  }
+};
+
+printForecastt(temperatures); // Call for data 1
+printForecastt(temperatures2); // Call for data 2
+
 // that's all...⚡⚡⚡
