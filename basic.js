@@ -1,7 +1,7 @@
-import "./style.css";
-import javascriptLogo from "./javascript.svg";
+import './style.css';
+import javascriptLogo from './javascript.svg';
 
-document.querySelector("#app").innerHTML = `
+document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
@@ -14,7 +14,7 @@ document.querySelector("#app").innerHTML = `
 
 // First Basic Program
 
-let Js = "Pro Shahid";
+let Js = 'Pro Shahid';
 // if (Js === "Pro Shahid") alert("Hello Shahid");
 
 console.log(45 + 65 + 80);
@@ -26,7 +26,7 @@ let firstNum = 27;
 console.log(firstNum);
 console.log(typeof firstNum);
 
-let secondString = "27";
+let secondString = '27';
 console.log(secondString);
 console.log(typeof secondString);
 
@@ -42,7 +42,7 @@ let fifthNull = null;
 console.log(fifthNull);
 console.log(typeof fifthNull);
 
-const sixthSymbol = Symbol("Shahid");
+const sixthSymbol = Symbol('Shahid');
 console.log(sixthSymbol);
 console.log(typeof sixthSymbol);
 
@@ -52,9 +52,9 @@ console.log(typeof seventhBigInt);
 
 // Third Basic Program _ Operators
 
-const firstName = "Moahmmad";
-const lastName = "Shahid";
-console.log(firstName + " " + lastName);
+const firstName = 'Moahmmad';
+const lastName = 'Shahid';
+console.log(firstName + ' ' + lastName);
 
 let x = 20;
 let y = 10;
@@ -138,23 +138,23 @@ console.log(markHigherBMI_2);
 
 // Fourth Basic Program _ Strings and Template Literals ES6
 
-const realname = "Shahid";
-const role = "Developer";
+const realname = 'Shahid';
+const role = 'Developer';
 const birthYear = 2001;
 const year = 2024;
 
 const shahid =
-  "Hi! My name is" +
-  " " +
+  'Hi! My name is' +
+  ' ' +
   realname +
-  " and  my job " +
-  " is a " +
+  ' and  my job ' +
+  ' is a ' +
   role +
-  " and " +
-  "my birthyear is" +
-  " " +
+  ' and ' +
+  'my birthyear is' +
+  ' ' +
   birthYear +
-  " and now in " +
+  ' and now in ' +
   year;
 console.log(shahid);
 
@@ -176,8 +176,8 @@ if (age >= ageRequired) {
   console.log(`You are eligible for driving a Bugatti 🚗`);
 } else console.log(`You are eligible for driving a Cycle 🚲😁`);
 
-const love = "1billion";
-const loveRequired = "1Billion";
+const love = '1billion';
+const loveRequired = '1Billion';
 
 if (love === loveRequired) {
   console.log(`You are eligible for marriage 💍`);
@@ -239,7 +239,7 @@ if (marrkssBMI > joohnssBMI) {
 
 // Sixth Basic Program _ Type Conversion and Coercion
 
-const numi = "36";
+const numi = '36';
 console.log(numi);
 console.log(typeof numi);
 console.log(Number(numi));
@@ -253,15 +253,15 @@ console.log(typeof String(namu));
 
 // type coercion
 
-const typo = "44";
+const typo = '44';
 
 console.log(`I'm typo a ${typo} years old`);
 console.log("I'm 36" + typo + 84);
-console.log("I'm 44" - "36");
-console.log("23" - 9 - "10");
+console.log("I'm 44" - '36');
+console.log('23' - 9 - '10');
 console.log(24 / 2);
 
-let n = "1" + 1;
+let n = '1' + 1;
 n = n - 1;
 console.log(n);
 
@@ -270,44 +270,44 @@ console.log(n);
 // 5 falsy values: 0, '', undefined, null, NaN
 
 console.log(Boolean(0));
-console.log(Boolean(""));
+console.log(Boolean(''));
 console.log(Boolean(undefined));
 console.log(Boolean(null));
 console.log(Boolean(NaN));
-console.log(Boolean(""));
+console.log(Boolean(''));
 console.log(Boolean({}));
 console.log(Boolean([]));
 
 const money = 0;
 if (money) {
   console.log("Don't spend it all 😁");
-} else console.log("You should get a job!");
+} else console.log('You should get a job!');
 
 const moneyy = 100;
 if (moneyy) {
   console.log("Don't spend it all 😁");
-} else console.log("You dont have money");
+} else console.log('You dont have money');
 
-let height = " ";
+let height = ' ';
 
 if (height) {
-  console.log("Yay! Height is defined");
-} else console.log("You are too short bz 0 is falsy value");
+  console.log('Yay! Height is defined');
+} else console.log('You are too short bz 0 is falsy value');
 
 let heightt;
 
 if (heightt) {
-  console.log("Yay! Height is defined");
-} else console.log("You are too short bz you are undefined");
+  console.log('Yay! Height is defined');
+} else console.log('You are too short bz you are undefined');
 
 // Eighth Basic Program _ Equality Operators: == vs. ===
 
 const length = 20;
-if (length == 20) console.log("Its 20");
+if (length == 20) console.log('Its 20');
 
-const width = "20";
-if (width === 20) console.log("Its 20 again!");
-else console.log("Its not 20");
+const width = '20';
+if (width === 20) console.log('Its 20 again!');
+else console.log('Its not 20');
 
 // const check = Number(prompt("What is your number"));
 // if (check !== 30) {
@@ -326,14 +326,14 @@ const hasGoodVision = true;
 const isTired = true;
 
 if (hasdrivingLicence && hasGoodVision) {
-  console.log("Shahid can drive a car");
+  console.log('Shahid can drive a car');
 }
 if (hasdrivingLicence || hasGoodVision) {
-  console.log("Again Shahid can drive a car");
+  console.log('Again Shahid can drive a car');
 }
 if (hasdrivingLicence && hasGoodVision && !isTired) {
-  console.log("Shahid can not drive a car");
-} else console.log("Shahid should learn how to drive a car");
+  console.log('Shahid can not drive a car');
+} else console.log('Shahid should learn how to drive a car');
 
 /*
 The Complete JavaScript Course 7
@@ -406,32 +406,32 @@ if (
 
 // Tenth Basic Program _ Switch Statement
 
-const week = "second week";
+const week = 'second week';
 
 switch (week) {
-  case "first week":
-    console.log("1");
+  case 'first week':
+    console.log('1');
     break;
-  case "second week":
-    console.log("2");
+  case 'second week':
+    console.log('2');
     break;
-  case "third week":
-    console.log("3");
+  case 'third week':
+    console.log('3');
     break;
   default:
-    console.log("Not a valid week");
+    console.log('Not a valid week');
 }
 
-const month = "sixth month";
+const month = 'sixth month';
 switch (month) {
-  case "first month":
-    console.log("1");
+  case 'first month':
+    console.log('1');
     break;
-  case "second month":
-    console.log("2");
+  case 'second month':
+    console.log('2');
     break;
   default:
-    console.log("Not a valid month");
+    console.log('Not a valid month');
 }
 
 // Eleventh Basic Program _ Statements and Expressions
@@ -457,7 +457,7 @@ const agee = 23;
 agee >= 15 ? console.log("I'm an adult") : console.log("I'm a little boy");
 
 const agee1 = 23;
-const drink = agee1 >= 18 ? "halal wine 🍷" : "water 💧";
+const drink = agee1 >= 18 ? 'halal wine 🍷' : 'water 💧';
 console.log(drink);
 
 const agee2 = 16;
@@ -528,11 +528,11 @@ const age2 = calcAge2(2001);
 console.log(age2);
 
 // Arrow Function
-const calcAge3 = (birthYear) => 2024 - birthYear;
+const calcAge3 = birthYear => 2024 - birthYear;
 const age3 = calcAge3(2001);
 console.log(age3);
 
-const yearsUntilRetirement = (birthYear) => {
+const yearsUntilRetirement = birthYear => {
   const age = 2024 - birthYear;
   const retirement = 65 - age;
   return retirement;
@@ -544,8 +544,8 @@ const yearsUntilRetirements = (birthYear, firstName) => {
   const retirement = 65 - age;
   return `${firstName} retires in ${retirement} years`;
 };
-console.log(yearsUntilRetirements(2001, "Shahid"));
-console.log(yearsUntilRetirements(2002, "Shahida"));
+console.log(yearsUntilRetirements(2001, 'Shahid'));
+console.log(yearsUntilRetirements(2002, 'Shahida'));
 
 // DRY Example Normal Expression Function
 const cutFruitPieces = function (fruits) {
@@ -562,7 +562,7 @@ const fruitProcessor = function (apples, oranges) {
 console.log(fruitProcessor(3, 4));
 
 // DRY Exapmle in Arrow Function
-const cutFruitPieces2 = (fruits) => fruits * 4;
+const cutFruitPieces2 = fruits => fruits * 4;
 
 const fruitProcessor2 = (apples, oranges) => {
   const applePiecess = cutFruitPieces2(apples);
@@ -615,7 +615,7 @@ const checkWinner = (avgDolphins, avgKoalas) => {
     console.log(`Dolphins win (${firstone} vs. ${secondone})`);
   } else if (secondone >= 2 * firstone) {
     console.log(`Koalas win (${secondone} vs. ${firstone})`);
-  } else console.log("No one wins");
+  } else console.log('No one wins');
 };
 
 checkWinner();
@@ -634,25 +634,25 @@ const checkWinner2 = (avgDolphins, avgKoalas) => {
     ? console.log(`Dolphins win (${firstone} vs. ${secondone})`)
     : secondone >= 2 * firstone
     ? console.log(`Koalas win (${secondone} vs. ${firstone})`)
-    : console.log("No one wins");
+    : console.log('No one wins');
 };
 
 checkWinner2();
 
 // Arrays
 
-const friends = ["Shahid", "Shahida", "Hena"];
+const friends = ['Shahid', 'Shahida', 'Hena'];
 console.log(friends);
 console.log(friends.length);
 console.log(friends[2]);
-friends.unshift("Hussian");
+friends.unshift('Hussian');
 console.log(friends);
-friends.push("Hussian");
+friends.push('Hussian');
 console.log(friends);
-friends.shift("Hussian");
+friends.shift('Hussian');
 console.log(friends);
-console.log(friends.includes("hena"));
-console.log(friends.includes("Hena"));
+console.log(friends.includes('hena'));
+console.log(friends.includes('Hena'));
 /*
 Coding Challenge #2
 Steven is still building his tip calculator, using the same rules as before: Tip 15% of
@@ -675,7 +675,7 @@ values (so don't store the tip values in separate variables first, but right in 
 array) �
 GOOD LUCK �*/
 
-const calcTip = (bill) => {
+const calcTip = bill => {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
 const bills = [125, 555, 44];
@@ -688,11 +688,11 @@ console.log(total);
 // Objects
 
 const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
   age: 2037 - 1991,
-  job: "teacher",
-  friends: ["Michael", "Peter", "Steven"],
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
   hasdrivingLicence: false,
   birthYear: 2001,
   calcAge: function () {
@@ -707,23 +707,23 @@ const jonas = {
   getSummary: function () {
     return `${this.firstName} is a ${this.age}-year old ${
       this.job
-    }, and he has ${this.hasdrivingLicence ? "a" : "no"} driver's license `;
+    }, and he has ${this.hasdrivingLicence ? 'a' : 'no'} driver's license `;
   },
 };
 console.log(jonas);
 console.log(jonas.lastName);
 // specail method
-const nameKey = "Name";
-console.log(jonas["first" + nameKey]);
-console.log(jonas["last" + nameKey]);
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
 //others
-console.log(jonas["age"]);
-console.log(jonas["job"]);
-console.log(jonas["friends"]);
+console.log(jonas['age']);
+console.log(jonas['job']);
+console.log(jonas['friends']);
 console.log(jonas.friends.length);
 console.log(jonas.friends[0]);
 console.log(jonas.friends[2]);
-console.log(jonas["friends"][2]);
+console.log(jonas['friends'][2]);
 console.log(jonas.hasdrivingLicence);
 console.log(jonas.calcAge());
 console.log(jonas.calcAgeArrow());
@@ -736,8 +736,8 @@ console.log(jonas.getSummary());
 // console.log(jonas[interestedIn]);
 
 // Addong in Objects
-jonas.location = "Portugal";
-jonas["twitter"] = "@jonasschmedtmann";
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtmann';
 console.log(jonas);
 
 // Challenge
@@ -748,7 +748,7 @@ console.log(
 // "Jonas is a 36-year old teacher, and he has a driver's license"
 console.log(
   `${jonas.firstName} is a ${jonas.age}-year old ${jonas.job}, and he has ${
-    jonas.hasdrivingLicence ? "a" : "no"
+    jonas.hasdrivingLicence ? 'a' : 'no'
   } driver's license`
 );
 /*
@@ -770,9 +770,9 @@ GOOD LUCK �
 */
 
 const mark = {
-  fullName: "Mark Miller",
-  mass: "78",
-  height: "1.69",
+  fullName: 'Mark Miller',
+  mass: '78',
+  height: '1.69',
   calcBMI: function () {
     this.BMI = this.mass / this.height ** 2;
     return this.BMI;
@@ -780,9 +780,9 @@ const mark = {
 };
 
 const john = {
-  fullName: "John Smith",
-  mass: "92",
-  height: "1.95",
+  fullName: 'John Smith',
+  mass: '92',
+  height: '1.95',
   calcBMI: function () {
     this.BMI = this.mass / this.height ** 2;
     return this.BMI;
@@ -804,7 +804,7 @@ for (let rep = 0; rep <= 5; rep++) {
   console.log(`Lifting weights repetition ${rep}`);
 }
 
-const years = ["2001", "2002", 2003, "2003", "2004", 2005, 2006];
+const years = ['2001', '2002', 2003, '2003', '2004', 2005, 2006];
 const ages = [];
 for (let i = 0; i < years.length; i++) {
   ages.push(2037 - years[i]);
@@ -813,15 +813,15 @@ console.log(years.length);
 console.log(ages);
 
 // continue
-console.log("----ONLY STRINGS----");
+console.log('----ONLY STRINGS----');
 for (let i = 0; i < years.length; i++) {
-  if (typeof years[i] !== "string") continue;
+  if (typeof years[i] !== 'string') continue;
   console.log(years[i], typeof years[i]);
 }
 // break
-console.log("----BREAK WITH NUMBER----");
+console.log('----BREAK WITH NUMBER----');
 for (let i = 0; i < years.length; i++) {
-  if (typeof years[i] === "number") break;
+  if (typeof years[i] === 'number') break;
   console.log(years[i], typeof years[i]);
 }
 
@@ -850,7 +850,7 @@ console.log(dice);
 while (dice !== 6) {
   console.log(`You rolled a ${dice}`);
   dice = Math.trunc(Math.random() * 6) + 1;
-  if (dice === 6) console.log("You rolled a 6");
+  if (dice === 6) console.log('You rolled a 6');
 }
 
 /*Coding Challenge #4
@@ -869,7 +869,7 @@ const bills2 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips2 = [];
 const total2 = [];
 for (let i = 0; i < bills2.length; i++) {
-  const calcTip = (bill) => {
+  const calcTip = bill => {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
   };
   tips2.push(calcTip(bills2[i]));
@@ -896,7 +896,7 @@ length of the array (because that's the number of elements)
 GOOD LUCK �
 */
 
-const calcAverage = (arr) => {
+const calcAverage = arr => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     //  sum = sum + arr[i];
