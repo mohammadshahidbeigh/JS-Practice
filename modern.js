@@ -394,3 +394,13 @@ team1 > team2 && console.log('Team 2 is more likely to win');
 team1 === team2 && console.log('Draw');
 
 // 7. The for-of Loop
+const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const item of menu2) console.log(item);
+
+// for (const item of menu2.entries()) {
+//   console.log(`${item[0] + 1}: ${item[1]}`);
+// }
+
+for (const [i, j] of menu2.entries()) {
+  console.log(`${i + 1}: ${j}`);
+}
