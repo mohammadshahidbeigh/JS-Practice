@@ -489,3 +489,66 @@ console.log(entries);
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key}, we open at ${open} and close at ${close}`);
 }
+
+/*
+Coding Challenge #2
+Let's continue with our football betting app! Keep using the 'game' variable from
+before.
+Your tasks:
+1. Loop over the game.scored array and print each player name to the console,
+along with the goal number (Example: "Goal 1: Lewandowski")
+2. Use a loop to calculate the average odd and log it to the console (We already
+studied how to calculate averages, you can go check if you don't remember)
+3. Print the 3 odds to the console, but in a nice formatted way, exactly like this:
+Odd of victory Bayern Munich: 1.33
+Odd of draw: 3.25
+Odd of victory Borrussia Dortmund: 6.5
+Get the team names directly from the game object, don't hardcode them
+(except for "draw"). Hint: Note how the odds and the game objects have the
+same property names 😉
+4. Bonus: Create an object called 'scorers' which contains the names of the
+players who scored as properties, and the number of goals as the value. In this
+game, it will look like this:
+{
+Gnarby: 1,
+Hummels: 1,
+Lewandowski: 2
+}
+GOOD LUCK 😀 */
+
+const scored = [...game.scored]; // Loop over an array
+for (const [i, player] of scored.entries()) {
+  console.log(`Goal ${i + 1}: ${player}`);
+}
+
+const odds = Object.values(game.odds); // Loop over an object
+let average = 0;
+for (const odd of odds) average += odd;
+average /= odds.length;
+console.log(average);
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr}: ${odd}`);
+}
+
+// Bonus Challenge that I could'nt solve
+
+// const scorers = Object.values(game.scored);
+// console.log(scorers);
+// for (const [i, player] of scorers.entries()) {
+//   console.log(`${player}: ${i + 1}`);
+// }
+
+// Step 1: Create the scorers object
+const scorers = {};
+
+// Step 2: Iterate over the scored array to populate the scorers object
+for (const player of game.scored) {
+  // If the player is already in the scorers object, increment the count
+  // Otherwise, add the player to the scorers object with a count of 1
+  scorers[player] = (scorers[player] || 0) + 1;
+}
+
+// Step 3: Print the scorers object
+console.log(scorers);
