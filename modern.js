@@ -690,9 +690,9 @@ const gameEvents = new Map([
   [90, '🔶 Yellow card'],
 ]);
 
-const events = [...new Set(gameEvents.values())];
+const events = [...new Set(gameEvents.values())]; // sets
 console.log(events);
-gameEvents.delete(64);
+gameEvents.delete(64); // delete method
 console.log(gameEvents);
 // console.log(gameEvents.size);
 console.log(
