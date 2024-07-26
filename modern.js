@@ -746,3 +746,125 @@ checkMiddleSeat('23C');
 checkMiddleSeat('3E');
 
 // 14. Working with Strings - Part 2
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+// console.log(airline[0].toUpperCase());
+
+// Fix capitalization in name
+const passenger = 'jOnAS'; // Jonas
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+// console.log(passenger[0].toUpperCase() + passenger.slice(1));
+// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1));
+// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
+// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
+// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
+// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
+
+// Comparing emails
+const email = 'shahid@gmail.com';
+const loginEmail = ' Hello.io';
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail);
+console.log(email === trimmedEmail);
+
+// Replacing
+const priceGB = '288,97£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
+
+const announcement =
+  'All passengers come to boarding door 23. Boarding door 23!';
+console.log(announcement.replace('door', 'gate'));
+
+// Regular Expression
+console.log(announcement.replace(/door/g, 'gate'));
+
+// Booleans
+const plane2 = 'Airbus A320neo';
+console.log(plane2.includes('A320'));
+console.log(plane2.startsWith('Airb'));
+console.log(plane2.endsWith('neo'));
+
+if (plane2.startsWith('Airbus') && plane2.endsWith('neo')) {
+  console.log('Part of the NEW Airbus family');
+}
+// console.log(plane2.startsWith('Airbus') && plane2.endsWith('neo'));
+// console.log(plane2.startsWith('Airbus') || plane2.endsWith('neo'));
+// console.log(plane2.startsWith('Airbus') || plane2.endsWith('neo'));
+// console.log(plane2.startsWith('Airbus') || plane2.endsWith('neo'));
+
+// Practice exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are NOT allowed on board');
+  } else {
+    console.log('Welcome aboard!');
+  }
+};
+
+checkBaggage('I have a laptop, some Food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection');
+
+// 15. Working with Strings - Part 3
+
+// Split and Join
+console.log('a+very+nice+string'.split('+'));
+console.log('Shahid Khan'.split(' '));
+// ['a', 'very', 'nice', 'string']
+const [firstName, lastName] = 'Shahid Khan'.split(' ');
+console.log(firstName, lastName);
+// ['Shahid', 'Khan']
+const message = 'Add 5 to 5';
+console.log(message.split(' '));
+
+const [command, value] = message.split(' ');
+console.log(command);
+
+const [firstt, secondd] = 'Shahid Khan'.split(' ');
+const newName = ['Mr.', firstt, secondd.toUpperCase()].join(' ');
+console.log(newName);
+
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+  for (const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(' '));
+};
+capitalizeName('shahid khan');
+
+// Padding
+const message2 = 'Go to gate 23!';
+console.log(message2.padStart(25, '+').padEnd(35, '+'));
+console.log('Shahid'.padStart(25, '+').padEnd(35, '+'));
+// 'Go to gate 23!' -> '   Go to gate 23!' -> '   Go to gate 23!   '
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+console.log(maskCreditCard(4337857583362038));
+console.log(maskCreditCard('4337857583362038'));
+
+// Repeat
+const message3 = 'Bad weather... All Departures Delayed... ';
+console.log(message3.repeat(5));
+
+const planesInline = function (n) {
+  console.log(`There are ${n} planes in line ${'✈️'.repeat(n)}`);
+};
+planesInline(5);
+planesInline(3);
+planesInline(12);
+
+// 16. Working with Strings - Part 4
