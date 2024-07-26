@@ -584,6 +584,7 @@ console.log(staffUnique);
 
 // 12. Maps: Fundamentals
 
+// Using Set and Get Method
 const resto = new Map();
 resto.set('name', 'Classico Italiano');
 resto.set(1, 'Firenze, Italy');
@@ -593,6 +594,7 @@ console.log(resto.get(1));
 // rest.get(2);
 console.log(resto.get(2));
 
+// Maps Iteration
 const question = new Map([
   ['question', 'What is the best programming language?'],
   [1, 'C'],
