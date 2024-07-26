@@ -626,6 +626,7 @@ console.log(resto.get(time > resto.get('open') && time < resto.get('close')));
 console.log(resto.has('categories'));
 resto.delete(2);
 console.log(resto);
+resto.set(document.querySelector('h1'), 'Heading');
 console.log(resto.size);
 // rest.clear();
 // console.log(rest.size);
