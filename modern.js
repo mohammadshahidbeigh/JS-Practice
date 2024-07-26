@@ -552,3 +552,87 @@ for (const player of game.scored) {
 
 // Step 3: Print the scorers object
 console.log(scorers);
+
+// 11. Sets
+
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSet);
+
+console.log(new Set('Shahid'));
+
+console.log(orderSet.size);
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Bread'));
+orderSet.add('Garlic Bread');
+orderSet.delete('Risotto');
+// orderSet.clear();
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+// 12. Maps: Fundamentals
+
+const resto = new Map();
+resto.set('name', 'Classico Italiano');
+resto.set(1, 'Firenze, Italy');
+console.log(resto.set(2, 'Lisbon, Portugal'));
+// rest.get(1);
+console.log(resto.get(1));
+// rest.get(2);
+console.log(resto.get(2));
+
+const question = new Map([
+  ['question', 'What is the best programming language?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct!'],
+  [false, 'Try again!'],
+]);
+console.log(question);
+
+// Convert object to map
+console.log(Object.entries(openingHours2));
+const hoursMap = new Map(Object.entries(openingHours2));
+console.log(hoursMap);
+
+resto
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open!')
+  .set(false, 'We are closed!');
+
+console.log(resto.get('name'));
+console.log(resto.get(true));
+console.log(resto.get(1));
+
+const time = 8;
+console.log(resto.get(time > resto.get('open') && time < resto.get('close')));
+
+console.log(resto.has('categories'));
+resto.delete(2);
+console.log(resto);
+console.log(resto.size);
+// rest.clear();
+// console.log(rest.size);
+
+const arr2 = [1, 2];
+resto.set(arr2, 'Test');
+console.log(resto);
+console.log(resto.size);
+
+console.log(resto.get(arr2));
