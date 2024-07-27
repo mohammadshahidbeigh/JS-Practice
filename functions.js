@@ -182,4 +182,164 @@ console.log(greetPerson('Alice'));  // Hello, Alice
 In summary, these concepts are indeed part of functional programming and are crucial for writing clean, efficient, and maintainable code. They help in leveraging the power of functions and immutability, which are key principles of functional programming.
 */
 
-// 1. Functions
+// Default Parameters
+// ES6 introduced default parameters for functions, allowing you to set default values for parameters that are not provided by the caller.
+// Default parameters are useful when you want to define a default value for a function parameter if no argument is passed or if the argument is undefined.
+
+const bookings = [];
+
+const createBooking = function (
+  flightNum,
+  numPassengers = 1, // ES6
+  price = 199 * numPassengers
+) {
+  // ES5
+  // numPassengers = numPassengers || 1;
+  // price = price || 199;
+
+  const booking = {
+    flightNum,
+    numPassengers,
+    price,
+  };
+  console.log(booking);
+  bookings.push(booking);
+};
+
+createBooking('LH123');
+createBooking('LH123', 2, 800);
+createBooking('LH123', 2);
+createBooking('LH123', 5);
+
+createBooking('LH123', undefined, 1000);
+
+// How Passing Arguments Works: Value vs. Reference
+// How Passing Arguments Works: Values vs. Reference
+const flight = 'LH234';
+const jonas = {
+  name: 'Jonas Schmedtmann',
+  passport: 24739479284,
+};
+
+const checkIn = function (flightNum, passenger) {
+  flightNum = 'LH999';
+  passenger.name = 'Mr. ' + passenger.name;
+
+  if (passenger.passport === 24739479284) {
+    console.log('Checked in');
+  } else {
+    console.log('Wrong passport!');
+  }
+};
+
+// checkIn(flight, jonas);
+// console.log(flight);
+// console.log(jonas);
+
+// Is the same as doing...
+// const flightNum = flight;
+// const passenger = jonas;
+
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 100000000000);
+};
+
+newPassport(jonas);
+checkIn(flight, jonas);
+
+// First-Class and Higher-Order Functions
+// Functions Accepting Callback Functions
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
+};
+
+// Higher-order function
+const transformer = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+
+  console.log(`Transformed by: ${fn.name}`);
+};
+
+transformer('JavaScript is the best!', upperFirstWord); // Here upperFirstWord is a Call back Function
+transformer('JavaScript is the best!', oneWord); // Here oneWord is a Call back Function
+
+// JS uses callbacks all the time
+const high5 = function () {
+  console.log('👋');
+}; // Here high5 is a Normal or Lower-order function
+document.body.addEventListener('click', high5); // Here addEventListener is a Higher-order function whereas high5 is also a Call back Function
+['Jonas', 'Martha', 'Adam'].forEach(high5);
+
+// Functions Returning Functions ---------IMP
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+greeterHey('Jonas');
+greeterHey('Steven');
+
+greet('Hello')('Jonas');
+
+// Challenge
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Jonas');
+
+// The call and apply Methods
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  // book: function() {}
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+
+lufthansa.book(239, 'Jonas Schmedtmann');
+lufthansa.book(635, 'John Smith');
+
+const eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+// Does NOT work
+// book(23, 'Sarah Williams');
+
+// Call method --- Good but not better then Bind Method
+book.call(eurowings, 23, 'Sarah Williams');
+console.log(eurowings);
+
+book.call(lufthansa, 239, 'Mary Cooper');
+console.log(lufthansa);
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  iataCode: 'LX',
+  bookings: [],
+};
+
+book.call(swiss, 583, 'Mary Cooper');
+
+// Apply method ----too old
+const flightData = [583, 'George Cooper'];
+book.apply(swiss, flightData);
+console.log(swiss);
+
+book.call(swiss, ...flightData); // Better and new way to use call method instead of apply method
