@@ -933,3 +933,5 @@ for (const flight of flights.split('+')) {
   )})`.padStart(36);
   console.log(output);
 }
+
+// that's all!
