@@ -343,3 +343,4 @@ book.apply(swiss, flightData);
 console.log(swiss);
 
 book.call(swiss, ...flightData); // Better and new way to use call method instead of apply method
+console.log(swiss);
