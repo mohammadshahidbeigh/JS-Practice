@@ -13,8 +13,7 @@ document.querySelector('#app').innerHTML = `
 `;
 
 // Functions - Higher order functions, bind methods and A Closer Look at Functions
-
-/*
+/* IMP FOR INTERVIEW 
 What is functional programming in javascript and what are the topics it includes
 ChatGPT
 Functional programming in JavaScript is a programming paradigm where functions are treated as first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions. This paradigm emphasizes the use of pure functions, immutability, and higher-order functions to build more predictable and maintainable code.
@@ -112,3 +111,5 @@ const promise = Promise.resolve(42);
 promise.then(x => x + 1).then(console.log);  // Promise is a monad
 These topics form the foundation of functional programming in JavaScript, promoting code that is more predictable, easier to test, and more modular.
 */
+
+// 1. Functions
