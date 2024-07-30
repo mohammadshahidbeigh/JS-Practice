@@ -896,7 +896,7 @@ length of the array (because that's the number of elements)
 GOOD LUCK �
 */
 
-const calcAverage = arr => {
+const calcAverage = arr2 => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     //  sum = sum + arr[i];
@@ -931,9 +931,9 @@ GOOD LUCK �*/
 // create a arrow function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
 // print these numbers 17,21 and 23 in strings in console like  Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
 
-const arr = [17, 21, 23];
+constarr2 = [17, 21, 23];
 
-const printForecast = arr => {
+const printForecast = arr2 => {
   for (let i = 0; i < arr.length; i++) {
     console.log(`... ${arr[i]}°C in ${i + 1} days`);
   }
@@ -955,7 +955,7 @@ console.log('----OR----');
 const temperatures = [17, 21, 23]; // Data 1
 const temperatures2 = [12, 5, -5, 0, 4]; // Data 2
 
-const printForecastt = arr => {
+const printForecastt = arr2 => {
   for (let i = 0; i < arr.length; i++) {
     console.log(`... ${arr[i]}°C in ${i + 1} days`);
   }

@@ -31,8 +31,8 @@ Definition: Immutability means that data cannot be modified after it is created.
 Example:
 javascript
 Copy code
-const arr = [1, 2, 3];
-const newArr = [...arr, 4];  // arr is not modified
+constarr2= [1, 2, 3];
+const newArr = [...arr, 4];  //arr2is not modified
 3. Higher-Order Functions
 Definition: Functions that operate on other functions, either by taking them as arguments or by returning them.
 Example:
