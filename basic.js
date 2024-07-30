@@ -12,15 +12,15 @@ document.querySelector('#app').innerHTML = `
   </div>
 `;
 
-// First Basic Program
+// &First Basic Program
 
 let Js = 'Pro Shahid';
-// if (Js === "Pro Shahid") alert("Hello Shahid");
+// &if (Js === "Pro Shahid") alert("Hello Shahid");
 
 console.log(45 + 65 + 80);
 
-// Second Basic Program _ Data Types
-// Number , String , Boolean , Undefined , Null , Symbol, BigInt.
+// &Second Basic Program _ Data Types
+// &Number , String , Boolean , Undefined , Null , Symbol, BigInt.
 
 let firstNum = 27;
 console.log(firstNum);
@@ -50,7 +50,7 @@ const seventhBigInt = 1234567890123456789012345678901234567890n;
 console.log(seventhBigInt);
 console.log(typeof seventhBigInt);
 
-// Third Basic Program _ Operators
+// &Third Basic Program _ Operators
 
 const firstName = 'Moahmmad';
 const lastName = 'Shahid';
@@ -97,7 +97,7 @@ m tall.
 m tall.
 GOOD LUCK 😀 */
 
-// solution for Data 1
+// &solution for Data 1
 
 const marksMass = 78;
 const marksHeight = 1.69;
@@ -117,7 +117,7 @@ console.log(johnsBMI);
 const markHigherBMI = marksBMI > johnsBMI;
 console.log(markHigherBMI);
 
-// solution for Data 2
+// &solution for Data 2
 
 const marksMass_2 = 95;
 const marksHeight_2 = 1.88;
@@ -136,7 +136,7 @@ console.log(johnsBMI_2);
 const markHigherBMI_2 = marksBMI_2 > johnsBMI_2;
 console.log(markHigherBMI_2);
 
-// Fourth Basic Program _ Strings and Template Literals ES6
+// &Fourth Basic Program _ Strings and Template Literals ES6
 
 const realname = 'Shahid';
 const role = 'Developer';
@@ -167,7 +167,7 @@ console.log(`String with
 multiple
 lines`);
 
-// Fifth Basic Program _ If / Else Statements
+// &Fifth Basic Program _ If / Else Statements
 
 const age = 9;
 const ageRequired = 18;
@@ -196,7 +196,7 @@ BMI (28.3) is higher than John's (23.9)!"
 Hint: Use an if/else statement 😉
 GOOD LUCK */
 
-// solution for Data 1
+// &solution for Data 1
 
 const marksMasss = 78;
 const marksHeightt = 1.69;
@@ -216,7 +216,7 @@ if (markssBMI > johnssBMI) {
   console.log(`Marks BMI ${markssBMI} is higher than Johns BMI ${johnssBMI}`);
 } else console.log(`Johns BMI ${johnssBMI} is higher than Marks ${markssBMI}`);
 
-// solution for Data 2
+// &solution for Data 2
 
 const marrksMasss = 95;
 const marrksHeightt = 1.88;
@@ -237,7 +237,7 @@ if (marrkssBMI > joohnssBMI) {
 } else
   console.log(`Johns BMI ${joohnssBMI} is higher than Marks ${marrkssBMI}`);
 
-// Sixth Basic Program _ Type Conversion and Coercion
+// &Sixth Basic Program _ Type Conversion and Coercion
 
 const numi = '36';
 console.log(numi);
@@ -251,7 +251,7 @@ console.log(typeof namu);
 console.log(String(namu));
 console.log(typeof String(namu));
 
-// type coercion
+// &type coercion
 
 const typo = '44';
 
@@ -265,9 +265,9 @@ let n = '1' + 1;
 n = n - 1;
 console.log(n);
 
-// Seventh Basic Program _ Truthy and Falsy Values
+// &Seventh Basic Program _ Truthy and Falsy Values
 
-// 5 falsy values: 0, '', undefined, null, NaN
+// &5 falsy values: 0, '', undefined, null, NaN
 
 console.log(Boolean(0));
 console.log(Boolean(''));
@@ -300,7 +300,7 @@ if (heightt) {
   console.log('Yay! Height is defined');
 } else console.log('You are too short bz you are undefined');
 
-// Eighth Basic Program _ Equality Operators: == vs. ===
+// &Eighth Basic Program _ Equality Operators: == vs. ===
 
 const length = 20;
 if (length == 20) console.log('Its 20');
@@ -309,17 +309,17 @@ const width = '20';
 if (width === 20) console.log('Its 20 again!');
 else console.log('Its not 20');
 
-// const check = Number(prompt("What is your number"));
-// if (check !== 30) {
-//   console.log("why not 30");
-// } else console.log("its 30");
+// &const check = Number(prompt("What is your number"));
+// &if (check !== 30) {
+// &  console.log("why not 30");
+// &} else console.log("its 30");
 
-// const checko = prompt("What is your number");
-// if (checko !== "30") {
-//   console.log("why not 30");
-// } else console.log("its 30");
+// &const checko = prompt("What is your number");
+// &if (checko !== "30") {
+// &  console.log("why not 30");
+// &} else console.log("its 30");
 
-// Ninth Basic Program _ Logical Operators
+// &Ninth Basic Program _ Logical Operators
 
 const hasdrivingLicence = true;
 const hasGoodVision = true;
@@ -358,7 +358,7 @@ Test data:
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 GOOD LUCK 😀 */
 
-// Data 1
+// &Data 1
 
 const teamDolphins_avg_Score = (96 + 108 + 89) / 3;
 const teamKoalas_avg_Score = (88 + 91 + 110) / 3;
@@ -369,7 +369,7 @@ if (teamDolphins_avg_Score > teamKoalas_avg_Score) {
   console.log(`Match draw`);
 } else console.log(`Koalas win the trophy 🏆`);
 
-// Data Bonus 1
+// &Data Bonus 1
 const teamDolphins_avg_Score_Bonus1 = (97 + 112 + 101) / 3;
 const teamKoalas_avg_Score_Bonus1 = (109 + 95 + 123) / 3;
 if (
@@ -381,7 +381,7 @@ if (
   console.log(`Match draw`);
 } else console.log(`Koalas win the trophy 🏆`);
 
-// Data Bonus 2
+// &Data Bonus 2
 const teamDolphins_avg_Score_Bonus2 = (97 + 112 + 101) / 3;
 const teamKoalas_avg_Score_Bonus2 = (109 + 95 + 106) / 3;
 if (
@@ -404,7 +404,7 @@ if (
   console.log(`Koalas win the trophy 🏆`);
 }
 
-// Tenth Basic Program _ Switch Statement
+// &Tenth Basic Program _ Switch Statement
 
 const week = 'second week';
 
@@ -434,24 +434,24 @@ switch (month) {
     console.log('Not a valid month');
 }
 
-// Eleventh Basic Program _ Statements and Expressions
+// &Eleventh Basic Program _ Statements and Expressions
 
-// Statements
-// 3 + 4;
-// 1991;
-// true && false && !true;
-// if (23 > 10) {
-//   const str = "23 is bigger";
-// }
-// Expressions
-// const me = "Shahida";
-// const job = "Developer";
-// const birthYearr = 2001;
-// const yearr = 2024;
-// const shahida =
-//   "I'm a " + job + " and I'm " + (yearr - birthYearr) + " years old";
+// &Statements
+// &3 + 4;
+// &1991;
+// &true && false && !true;
+// &if (23 > 10) {
+// &  const str = "23 is bigger";
+// &}
+// &Expressions
+// &const me = "Shahida";
+// &const job = "Developer";
+// &const birthYearr = 2001;
+// &const yearr = 2024;
+// &const shahida =
+// &  "I'm a " + job + " and I'm " + (yearr - birthYearr) + " years old";
 
-// Twelveth Basic Program _ The Conditional (Ternary) Operator______________________IMPORTANT
+// &Twelveth Basic Program _ The Conditional (Ternary) Operator______________________IMPORTANT
 
 const agee = 23;
 agee >= 15 ? console.log("I'm an adult") : console.log("I'm a little boy");
@@ -467,7 +467,7 @@ const drink2 =
     : ` He can not drink halal wine bz he is ${agee2} years old`;
 console.log(drink2);
 
-// Thirteenth Basic Program _ Coding Challenge #4
+// &Thirteenth Basic Program _ Coding Challenge #4
 /*
 The Complete JavaScript Course 8
 Coding Challenge #4
@@ -489,7 +489,7 @@ Hints:
 § Value X is between 50 and 300, if it's >= 50 && <= 300 😉
 GOOD LUCK 😀 */
 
-// Data 1
+// &Data 1
 const billvalue1 = 275;
 const tip1 =
   billvalue1 >= 50 && billvalue1 <= 300 ? billvalue1 * 0.15 : billvalue1 * 0.2;
@@ -509,25 +509,25 @@ console.log(
   }`
 );
 
-// Functions, Arrays, Objects and Loops
+// &Functions, Arrays, Objects and Loops
 
-// Functions
-// Function Declaration
+// &Functions
+// &Function Declaration
 function calcAge1(birthYear1) {
-  // birthyear = parameter
+  // &birthyear = parameter
   return 2024 - birthYear1;
 }
-const age1 = calcAge1(2001); // calcAge1 2001 = argument
+const age1 = calcAge1(2001); // &calcAge1 2001 = argument
 console.log(age1);
 
-// Function Expression
+// &Function Expression
 const calcAge2 = function (birthYear2) {
   return 2024 - birthYear2;
 };
 const age2 = calcAge2(2001);
 console.log(age2);
 
-// Arrow Function
+// &Arrow Function
 const calcAge3 = birthYear => 2024 - birthYear;
 const age3 = calcAge3(2001);
 console.log(age3);
@@ -547,7 +547,7 @@ const yearsUntilRetirements = (birthYear, firstName) => {
 console.log(yearsUntilRetirements(2001, 'Shahid'));
 console.log(yearsUntilRetirements(2002, 'Shahida'));
 
-// DRY Example Normal Expression Function
+// &DRY Example Normal Expression Function
 const cutFruitPieces = function (fruits) {
   return fruits * 4;
 };
@@ -561,7 +561,7 @@ const fruitProcessor = function (apples, oranges) {
 
 console.log(fruitProcessor(3, 4));
 
-// DRY Exapmle in Arrow Function
+// &DRY Exapmle in Arrow Function
 const cutFruitPieces2 = fruits => fruits * 4;
 
 const fruitProcessor2 = (apples, oranges) => {
@@ -600,7 +600,7 @@ Hints:
 Apply this to the team's average scores �
 GOOD LUCK �
 */
-// Data 1
+// &Data 1
 const calcAverageforDolphins = () => {
   return (44 + 23 + 71) / 3;
 };
@@ -619,7 +619,7 @@ const checkWinner = (avgDolphins, avgKoalas) => {
 };
 
 checkWinner();
-// Data 2
+// &Data 2
 const calcAverageforDolphins2 = () => {
   return (85 + 54 + 41) / 3;
 };
@@ -639,7 +639,7 @@ const checkWinner2 = (avgDolphins, avgKoalas) => {
 
 checkWinner2();
 
-// Arrays
+// &Arrays
 
 const friends = ['Shahid', 'Shahida', 'Hena'];
 console.log(friends);
@@ -685,7 +685,7 @@ console.log(bills);
 console.log(tips);
 console.log(total);
 
-// Objects
+// &Objects
 
 const jonas = {
   firstName: 'Jonas',
@@ -701,7 +701,7 @@ const jonas = {
   },
   calcAgeArrow: () => {
     const currentYear = 2037;
-    // Using the outer 'this' context, which is not ideal in this scenario
+    // &Using the outer 'this' context, which is not ideal in this scenario
     return currentYear - jonas.birthYear;
   },
   getSummary: function () {
@@ -712,7 +712,7 @@ const jonas = {
 };
 console.log(jonas);
 console.log(jonas.lastName);
-// specail method
+// &specail method
 const nameKey = 'Name';
 console.log(jonas['first' + nameKey]);
 console.log(jonas['last' + nameKey]);
@@ -730,22 +730,22 @@ console.log(jonas.calcAgeArrow());
 console.log(jonas.age);
 console.log(jonas.getSummary());
 
-// const interestedIn = prompt(
-//   "What do you want to know about Jonas Choose between firstName, lastName, age, job, and friends"
-// );
-// console.log(jonas[interestedIn]);
+// &const interestedIn = prompt(
+// &  "What do you want to know about Jonas Choose between firstName, lastName, age, job, and friends"
+// &);
+// &console.log(jonas[interestedIn]);
 
-// Addong in Objects
+// &Addong in Objects
 jonas.location = 'Portugal';
 jonas['twitter'] = '@jonasschmedtmann';
 console.log(jonas);
 
-// Challenge
-// "Jonas has 3 friends, and his best friend is called Michael"
+// &Challenge
+// &"Jonas has 3 friends, and his best friend is called Michael"
 console.log(
   `${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`
 );
-// "Jonas is a 36-year old teacher, and he has a driver's license"
+// &"Jonas is a 36-year old teacher, and he has a driver's license"
 console.log(
   `${jonas.firstName} is a ${jonas.age}-year old ${jonas.job}, and he has ${
     jonas.hasdrivingLicence ? 'a' : 'no'
@@ -798,8 +798,8 @@ mark.calcBMI() > john.calcBMI()
       `"John's BMI ${john.calcBMI()} is higher than Mark's ${mark.calcBMI()}`
     );
 
-// Loops
-// for loop
+// &Loops
+// &for loop
 for (let rep = 0; rep <= 5; rep++) {
   console.log(`Lifting weights repetition ${rep}`);
 }
@@ -812,25 +812,25 @@ for (let i = 0; i < years.length; i++) {
 console.log(years.length);
 console.log(ages);
 
-// continue
+// &continue
 console.log('----ONLY STRINGS----');
 for (let i = 0; i < years.length; i++) {
   if (typeof years[i] !== 'string') continue;
   console.log(years[i], typeof years[i]);
 }
-// break
+// &break
 console.log('----BREAK WITH NUMBER----');
 for (let i = 0; i < years.length; i++) {
   if (typeof years[i] === 'number') break;
   console.log(years[i], typeof years[i]);
 }
 
-// backwards
+// &backwards
 for (let i = years.length - 1; i >= 0; i--) {
   console.log(i, years[i]);
 }
 
-// loop inside a loop
+// &loop inside a loop
 for (let circle = 1; circle <= 3; circle++) {
   console.log(`THIS IS A ${circle} CIRCLE `);
   for (let dot = 1; dot <= 2; dot++) {
@@ -838,14 +838,14 @@ for (let circle = 1; circle <= 3; circle++) {
   }
 }
 
-// while loop
+// &while loop
 let repp = 1;
 while (repp <= 5) {
   console.log(`Repeat this without using repp++ ${repp} 😂`);
   repp++;
 }
 
-let dice = Math.trunc(Math.random() * 6) + 1; // doesnt really depends on hardcoded counter variable like in this case.
+let dice = Math.trunc(Math.random() * 6) + 1; // &doesnt really depends on hardcoded counter variable like in this case.
 console.log(dice);
 while (dice !== 6) {
   console.log(`You rolled a ${dice}`);
@@ -899,7 +899,7 @@ GOOD LUCK �
 const calcAverage = arr2 => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
-    //  sum = sum + arr[i];
+    // & sum = sum + arr[i];
     sum += arr[i];
   }
   return sum / arr.length;
@@ -921,15 +921,15 @@ Test data:
 § Data 2: [12, 5, -5, 0, 4]
 GOOD LUCK �*/
 
-// Data 1
-// Step 1 - Understanding the problem
-// maximun temp among these 17,21,23
-// print these numbers 17,21 and 23 in strings in console
+// &Data 1
+// &Step 1 - Understanding the problem
+// &maximun temp among these 17,21,23
+// &print these numbers 17,21 and 23 in strings in console
 
-// Step 2 - Breaking up into sub-problems
-// create an array 'arr' which holds these values
-// create a arrow function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
-// print these numbers 17,21 and 23 in strings in console like  Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+// &Step 2 - Breaking up into sub-problems
+// &create an array 'arr' which holds these values
+// &create a arrow function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
+// &print these numbers 17,21 and 23 in strings in console like  Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
 
 constarr2 = [17, 21, 23];
 
@@ -940,7 +940,7 @@ const printForecast = arr2 => {
 };
 printForecast(arr);
 
-// Data 2
+// &Data 2
 const arr2 = [12, 5, -5, 0, 4];
 
 const printForecast2 = arr2 => {
@@ -950,10 +950,10 @@ const printForecast2 = arr2 => {
 };
 printForecast2(arr2);
 
-// OR
+// &OR
 console.log('----OR----');
-const temperatures = [17, 21, 23]; // Data 1
-const temperatures2 = [12, 5, -5, 0, 4]; // Data 2
+const temperatures = [17, 21, 23]; // &Data 1
+const temperatures2 = [12, 5, -5, 0, 4]; // &Data 2
 
 const printForecastt = arr2 => {
   for (let i = 0; i < arr.length; i++) {
@@ -961,7 +961,7 @@ const printForecastt = arr2 => {
   }
 };
 
-printForecastt(temperatures); // Call for data 1
-printForecastt(temperatures2); // Call for data 2
+printForecastt(temperatures); // &Call for data 1
+printForecastt(temperatures2); // &Call for data 2
 
-// that's all...⚡⚡⚡
+// &that's all...⚡⚡⚡

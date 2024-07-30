@@ -12,12 +12,12 @@ document.querySelector('#app').innerHTML = `
   </div>
 `;
 
-// Working with Arrays
+// &Working with Arrays
 
-// Simple Array Methods
+// &Simple Array Methods
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
-// SLICE
+// &SLICE
 console.log(arr.slice(2));
 console.log(arr.slice(2, 4));
 console.log(arr.slice(-2));
@@ -26,34 +26,34 @@ console.log(arr.slice(1, -2));
 console.log(arr.slice());
 console.log([...arr]);
 
-// SPLICE
-// console.log(arr.splice(2));
+// &SPLICE
+// &console.log(arr.splice(2));
 arr.splice(-1);
 console.log(arr);
 arr.splice(1, 2);
 console.log(arr);
 
-// REVERSE
+// &REVERSE
 arr = ['a', 'b', 'c', 'd', 'e'];
 const arr3 = ['j', 'i', 'h', 'g', 'f'];
 console.log(arr3.reverse());
 console.log(arr3);
 
-// CONCAT
+// &CONCAT
 const letters = arr.concat(arr3);
 console.log(letters);
 console.log([...arr, ...arr3]);
 
-// JOIN
+// &JOIN
 console.log(letters.join(' - '));
 
 ///////////////////////////////////////
-// The new at Method
+// &The new at Method
 const arr2 = [23, 11, 64];
 console.log(arr2[0]);
 console.log(arr2.at(0));
 
-// getting last array element
+// &getting last array element
 console.log(arr2[arr2.length - 1]);
 console.log(arr2.slice(-1)[0]);
 console.log(arr2.at(-1));
@@ -62,10 +62,10 @@ console.log('jonas'.at(0));
 console.log('jonas'.at(-1));
 
 ///////////////////////////////////////
-// Looping Arrays: forEach
+// &Looping Arrays: forEach
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-// for (const movement of movements) {
+// &for (const movement of movements) {
 for (const [i, movement] of movements.entries()) {
   if (movement > 0) {
     console.log(`Movement ${i + 1}: You deposited ${movement}`);
@@ -82,22 +82,22 @@ movements.forEach(function (mov, i, arr) {
     console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
   }
 });
-// 0: function(200)
-// 1: function(450)
-// 2: function(400)
-// ...
+// &0: function(200)
+// &1: function(450)
+// &2: function(400)
+// &...
 
 let sum = 0;
 const numbers = [1, 2, 3, 4, 5];
 
 numbers.forEach(number => {
-  sum += number; // Side effect: modifies the external variable 'sum'
+  sum += number; // &Side effect: modifies the external variable 'sum'
 });
 
-console.log(sum); // Output: 15
+console.log(sum); // &Output: 15
 
-// forEach With Maps and Sets
-// Map
+// &forEach With Maps and Sets
+// &Map
 const currencies = new Map([
   ['USD', 'United States dollar'],
   ['EUR', 'Euro'],
@@ -108,14 +108,14 @@ currencies.forEach(function (value, key, map) {
   console.log(`${key}: ${value}`);
 });
 
-// Set
+// &Set
 const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
 console.log(currenciesUnique);
 currenciesUnique.forEach(function (value, _, map) {
   console.log(`${value}: ${value}`);
 });
 
-// Coding Challenge #1
+// &Coding Challenge #1
 
 /* 
 Julia and Kate are doing a study on dogs. So each of them asked 5 dog owners about their dog's age, and stored the data into an array (one array for each). For now, they are just interested in knowing whether a dog is an adult or a puppy. A dog is an adult if it is at least 3 years old, and it's a puppy if it's less than 3 years old.
@@ -139,7 +139,7 @@ const checkDogs = function (dogsJulia, dogsKate) {
   const dogsJuliaCorrected = dogsJulia.slice();
   dogsJuliaCorrected.splice(0, 1);
   dogsJuliaCorrected.splice(-2);
-  // dogsJulia.slice(1, 3);
+  // &dogsJulia.slice(1, 3);
   const dogs = dogsJuliaCorrected.concat(dogsKate);
   console.log(dogs);
 
@@ -151,23 +151,23 @@ const checkDogs = function (dogsJulia, dogsKate) {
     }
   });
 };
-// checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
+// &checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
 checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 
-// The map Method
+// &The map Method
 
 const eurToUsd = 1.1;
 
-// const movementsUSD = movements.map(function (mov) {
-//   return mov * eurToUsd;
-// });
+// &const movementsUSD = movements.map(function (mov) {
+// &  return mov * eurToUsd;
+// &});
 
 const movementsUSD = movements.map(mov => mov * eurToUsd);
 
 console.log(movements);
 console.log(movementsUSD);
 
-const movementsUSDfor = []; // With the old For of Loop
+const movementsUSDfor = []; // &With the old For of Loop
 for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
 console.log(movementsUSDfor);
 
@@ -179,7 +179,7 @@ const movementsDescriptions = movements.map(
 );
 console.log(movementsDescriptions);
 
-// The filter Method
+// &The filter Method
 
 const deposits = movements.filter(function (mov, i, arr) {
   return mov > 0;
@@ -187,7 +187,7 @@ const deposits = movements.filter(function (mov, i, arr) {
 console.log(movements);
 console.log(deposits);
 
-const depositsFor = []; // With the old For of Loop
+const depositsFor = []; // &With the old For of Loop
 for (const mov of movements) if (mov > 0) depositsFor.push(mov);
 console.log(depositsFor);
 

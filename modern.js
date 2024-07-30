@@ -12,8 +12,8 @@ document.querySelector('#app').innerHTML = `
   </div>
 `;
 
-// Data Structures, Modern Operators and Strings
-// 1. Destructuring Arrays
+// &Data Structures, Modern Operators and Strings
+// &1. Destructuring Arrays
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -31,14 +31,14 @@ const restaurant = {
       close: 23,
     },
     sat: {
-      open: 0, // Open 24 hours
+      open: 0, // &Open 24 hours
       close: 24,
     },
   },
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-  // Passing an object to the function for fast destructuring
+  // &Passing an object to the function for fast destructuring
   orderDelivery: function ({
     starterIndex = 1,
     mainIndex = 0,
@@ -61,28 +61,28 @@ const restaurant = {
 const [first, , second] = restaurant.categories;
 console.log(first, second);
 
-// Switching variables
+// &Switching variables
 let [main, , secondary] = restaurant.categories;
 console.log(main, secondary);
 [main, secondary] = [secondary, main];
 console.log(main, secondary);
 
-// Receive 2 return values from a function
+// &Receive 2 return values from a function
 console.log(restaurant.order(2, 0));
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse);
 
-// Nested destructuring
+// &Nested destructuring
 const nested = [2, 4, [5, 6]];
-// const [i, , j] = nested;
+// &const [i, , j] = nested;
 const [i, , [j, k]] = nested;
 console.log(i, j, k);
 
-// Default values
+// &Default values
 const [p = 1, q = 1, r = 1] = [8];
 console.log(p, q, r);
 
-// Destructuring objects
+// &Destructuring objects
 
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
@@ -94,35 +94,35 @@ const {
 } = restaurant;
 console.log(restaurantName, hours, tags);
 
-// Default values
+// &Default values
 const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
 
-// Mutating variables
+// &Mutating variables
 let a = 111;
 let b = 999;
 const obj = { a: 23, b: 7, c: 14 };
 ({ a, b } = obj);
 console.log(a, b);
 
-// Nested objects
+// &Nested objects
 const {
   fri: { open, close },
-  //   fri: { open: o, close: c },
+  // &  fri: { open: o, close: c },
 } = openingHours;
 console.log(open, close);
-// console.log(o, c);
+// &console.log(o, c);
 
-// calling the object in the function
+// &calling the object in the function
 restaurant.orderDelivery({
   address: 'Via del Sole, 21',
 });
 
-// 2. The Spread Operator (...)
+// &2. The Spread Operator (...)
 
 constarr2 = [7, 8, 9];
-// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-// console.log(badNewArr);
+// &const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// &console.log(badNewArr);
 
 const newArr = [1, 2, ...arr];
 console.log(newArr);
@@ -131,50 +131,50 @@ console.log(...newArr);
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 console.log(newMenu);
 
-// Copy array - A shallow Copy
+// &Copy array - A shallow Copy
 const mainMenuCopy = [...restaurant.mainMenu];
 console.log(mainMenuCopy);
 
-// Join 2 arrays
+// &Join 2 arrays
 const menuNew = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menuNew);
 
-// Iterables: arrays, strings, maps, sets. NOT objects
+// &Iterables: arrays, strings, maps, sets. NOT objects
 const str = 'Shahid';
 const letters = [...str, ' ', 'S.'];
 console.log(letters);
 console.log(...str);
 //console.log`${...str} Kuchbhi');
 
-// Real-world example
-// const ingredients = [
-//   prompt("Let's make pasta! Ingredient 1?"),
-//   prompt('Ingredient 2?'),
-//   prompt('Ingredient 3?'),
-// ];
-// restaurant.orderPasta(...ingredients);
+// &Real-world example
+// &const ingredients = [
+// &  prompt("Let's make pasta! Ingredient 1?"),
+// &  prompt('Ingredient 2?'),
+// &  prompt('Ingredient 3?'),
+// &];
+// &restaurant.orderPasta(...ingredients);
 
-// Objects - Not plain object by the way!
+// &Objects - Not plain object by the way!
 const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Shahid' };
 console.log(newRestaurant);
 
-// Copy array - A shallow Copy
+// &Copy array - A shallow Copy
 const restaurantCopy = { ...restaurant };
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
 
-// 3. Rest Pattern and Parameters
+// &3. Rest Pattern and Parameters
 
-// With Arrays
+// &With Arrays
 const array = [1, 2, 3, 4, 5];
 const [firsty, secondy, ...resty] = array;
 
-console.log(firsty); // 1
-console.log(secondy); // 2
-console.log(resty); // [3, 4, 5]
+console.log(firsty); // &1
+console.log(secondy); // &2
+console.log(resty); // &[3, 4, 5]
 
-// With Object
+// &With Object
 const person = {
   name: 'John Doe',
   age: 30,
@@ -184,11 +184,11 @@ const person = {
 
 const { namee, age, ...rest } = person;
 
-console.log(namee); // 'John Doe'
-console.log(age); // 30
-console.log(rest); // { profession: 'Developer', country: 'USA' }
+console.log(namee); // &'John Doe'
+console.log(age); // &30
+console.log(rest); // &{ profession: 'Developer', country: 'USA' }
 
-// With Functions - Exactly opposed to the spread operator
+// &With Functions - Exactly opposed to the spread operator
 const add = function (...numbers) {
   let sum = 0;
   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
@@ -199,13 +199,13 @@ add(2, 3);
 add(5, 3, 7, 2);
 add(8, 2, 5, 3, 2, 1, 4);
 
-// With function inside the object above
+// &With function inside the object above
 restaurant.orderPizza('mushroom', 'onion', 'olives', 'spinach');
 
-// 4. Short Circuiting (&& and || operators)
+// &4. Short Circuiting (&& and || operators)
 
 console.log('---- OR ----');
-// Use ANY data type, return ANY data type, short-circuiting
+// &Use ANY data type, return ANY data type, short-circuiting
 console.log(3 || 'Shahid');
 console.log('' || 'Shahid');
 console.log(true || 0);
@@ -226,7 +226,7 @@ console.log(7 && 'Shahid');
 
 console.log('Hello' && 23 && null && 'Shahid');
 
-// Practical example
+// &Practical example
 if (restaurant.orderPizza) {
   restaurant.orderPizza('mushroom', 'onion', 'olives', 'spinach');
 }
@@ -234,55 +234,55 @@ if (restaurant.orderPizza) {
 restaurant.orderPizza &&
   restaurant.orderPizza('mushroom', 'onion', 'olives', 'spinach');
 
-// 5. Nullish Coalescing Operator (??)
+// &5. Nullish Coalescing Operator (??)
 restaurant.numGuests = 0;
 const guests = restaurant.numGuests || 10;
 console.log(guests);
 
-// Nullish: null and undefined (NOT 0 or '')
+// &Nullish: null and undefined (NOT 0 or '')
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
 
-// 6. Logical Assignment Operators
+// &6. Logical Assignment Operators
 
-// Logical AND Assignment (&&=)
+// &Logical AND Assignment (&&=)
 
 let ax = true;
 let by = false;
 
-ax &&= true; // a = true (a is already true, so it stays true)
-by &&= true; // b = false (b is false, so it stays false)
+ax &&= true; // &a = true (a is already true, so it stays true)
+by &&= true; // &b = false (b is false, so it stays false)
 
-console.log(ax); // true
-console.log(by); // false
+console.log(ax); // &true
+console.log(by); // &false
 
-// Logical OR Assignment (||=)
+// &Logical OR Assignment (||=)
 
 let axx = false;
 let byy = 0;
 let cz = null;
 
-axx ||= true; // a = true (a is false, so it becomes true)
-byy ||= 42; // b = 42 (b is falsy, so it becomes 42)
-cz ||= 'default'; // c = "default" (c is null, so it becomes "default")
+axx ||= true; // &a = true (a is false, so it becomes true)
+byy ||= 42; // &b = 42 (b is falsy, so it becomes 42)
+cz ||= 'default'; // &c = "default" (c is null, so it becomes "default")
 
-console.log(axx); // true
-console.log(byy); // 42
-console.log(cz); // "default"
+console.log(axx); // &true
+console.log(byy); // &42
+console.log(cz); // &"default"
 
-// Logical Nullish Assignment (??=)
+// &Logical Nullish Assignment (??=)
 
 let axxx = null;
 let byyy = undefined;
 let c = 0;
 
-axxx ??= 'default'; // a = "default" (a is null, so it becomes "default")
-byyy ??= 'default'; // b = "default" (b is undefined, so it becomes "default")
-c ??= 42; // c = 0 (c is not null or undefined, so it stays 0)
+axxx ??= 'default'; // &a = "default" (a is null, so it becomes "default")
+byyy ??= 'default'; // &b = "default" (b is undefined, so it becomes "default")
+c ??= 42; // &c = 0 (c is not null or undefined, so it stays 0)
 
-console.log(axxx); // "default"
-console.log(byyy); // "default"
-console.log(c); // 0
+console.log(axxx); // &"default"
+console.log(byyy); // &"default"
+console.log(c); // &0
 /*
 Coding Challenge #1
 We're building a football betting app (soccer for my American friends 😅)!
@@ -355,29 +355,29 @@ const game = {
 
 console.log(game);
 
-const [players1, players2] = game.players; // Destructuring - Smaller Parts
+const [players1, players2] = game.players; // &Destructuring - Smaller Parts
 console.log(players1, players2);
 
-const [gk, ...fieldPlayers] = players1; // Rest pattern -- Unpack
+const [gk, ...fieldPlayers] = players1; // &Rest pattern -- Unpack
 console.log(gk, fieldPlayers);
 
-const [gk2, ...fieldPlayers2] = players2; // Rest pattern -- Unpack
+const [gk2, ...fieldPlayers2] = players2; // &Rest pattern -- Unpack
 console.log(gk2, fieldPlayers2);
 
-const allPlayers = [...players1, ...players2]; // Spread operator - Pack
+const allPlayers = [...players1, ...players2]; // &Spread operator - Pack
 console.log(allPlayers);
 
-const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic']; // Spread operator - Pack
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic']; // &Spread operator - Pack
 console.log(players1Final);
 
-const { team1, x: draw, team2 } = game.odds; // Destructuring - Smaller Parts
+const { team1, x: draw, team2 } = game.odds; // &Destructuring - Smaller Parts
 console.log(team1, draw, team2);
 
 const printGoals = function (...players) {
   console.log(players);
   console.log(`${players.length} goals were scored`);
 };
-printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich'); // Rest parameter syntax
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich'); // &Rest parameter syntax
 
 printGoals(
   'Davies',
@@ -389,29 +389,29 @@ printGoals(
 );
 printGoals(...game.scored);
 
-team1 < team2 && console.log('Team 1 is more likely to win'); // Short Circuiting using && Operator
+team1 < team2 && console.log('Team 1 is more likely to win'); // &Short Circuiting using && Operator
 team1 > team2 && console.log('Team 2 is more likely to win');
 team1 === team2 && console.log('Draw');
 
-// 7. The for-of Loop // Modern way for using a for loop
+// &7. The for-of Loop // &Modern way for using a for loop
 
 const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
 for (const item of menu2) console.log(item);
 
-// for (const item of menu2.entries()) {
-//   console.log(`${item[0] + 1}: ${item[1]}`);
-// }
+// &for (const item of menu2.entries()) {
+// &  console.log(`${item[0] + 1}: ${item[1]}`);
+// &}
 
 for (const [i, j] of menu2.entries()) {
   console.log(`${i + 1}: ${j}`);
 }
 
-// 8. Enhanced Object Literals
+// &8. Enhanced Object Literals
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const openingHours2 = {
   [weekdays[3]]: {
-    // Destructuring with Enhanced Object Literals
+    // &Destructuring with Enhanced Object Literals
     open: 12,
     close: 22,
   },
@@ -420,18 +420,18 @@ const openingHours2 = {
     close: 23,
   },
   [weekdays[5]]: {
-    open: 0, // Open 24 hours
+    open: 0, // &Open 24 hours
     close: 24,
   },
 };
-// console.log(openingHours2);
+// &console.log(openingHours2);
 const restaurant2 = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  openingHours2, // Enhanced ES6 Object Literals
+  openingHours2, // &Enhanced ES6 Object Literals
   order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
@@ -451,41 +451,41 @@ const restaurant2 = {
 
 console.log(restaurant2);
 
-// 9. Optional Chaining (?.)
-// restaurant.openingHours.mon // Error
-// restaurant.openingHours.mon.open // Error
-// restaurant.openingHours.mon?.open // undefined
+// &9. Optional Chaining (?.)
+// &restaurant.openingHours.mon // &Error
+// &restaurant.openingHours.mon.open // &Error
+// &restaurant.openingHours.mon?.open // &undefined
 
-// Example
+// &Example
 const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 for (const day of days) {
   const open = restaurant.openingHours[day]?.open ?? 'closed';
   console.log(`On ${day}, we open at ${open}`);
 }
 
-// Methods
+// &Methods
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
 console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
 
-// Arrays
+// &Arrays
 const users = [{ name: 'Shahid', email: 'shahid@gmail.com' }];
 console.log(users[0]?.name ?? 'User array empty');
 console.log(users[1]?.name ?? 'User array empty');
 
-// 10. Looping Objects: Object Keys, Values, and Entries
+// &10. Looping Objects: Object Keys, Values, and Entries
 
-// Property NAMES - Key
+// &Property NAMES - Key
 const properties = Object.keys(openingHours2);
 console.log(properties);
-// Property VALUES
+// &Property VALUES
 const values = Object.values(openingHours2);
 console.log(values);
 
-// Entire Object
+// &Entire Object
 const entries = Object.entries(openingHours2);
 console.log(entries);
 
-// Loop over an Object
+// &Loop over an Object
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key}, we open at ${open} and close at ${close}`);
 }
@@ -516,12 +516,12 @@ Lewandowski: 2
 }
 GOOD LUCK 😀 */
 
-const scored = [...game.scored]; // Loop over an array
+const scored = [...game.scored]; // &Loop over an array
 for (const [i, player] of scored.entries()) {
   console.log(`Goal ${i + 1}: ${player}`);
 }
 
-const odds = Object.values(game.odds); // Loop over an object
+const odds = Object.values(game.odds); // &Loop over an object
 let average = 0;
 for (const odd of odds) average += odd;
 average /= odds.length;
@@ -532,28 +532,28 @@ for (const [team, odd] of Object.entries(game.odds)) {
   console.log(`Odd of ${teamStr}: ${odd}`);
 }
 
-// Bonus Challenge that I could'nt solve
+// &Bonus Challenge that I could'nt solve
 
-// const scorers = Object.values(game.scored);
-// console.log(scorers);
-// for (const [i, player] of scorers.entries()) {
-//   console.log(`${player}: ${i + 1}`);
-// }
+// &const scorers = Object.values(game.scored);
+// &console.log(scorers);
+// &for (const [i, player] of scorers.entries()) {
+// &  console.log(`${player}: ${i + 1}`);
+// &}
 
-// Step 1: Create the scorers object
+// &Step 1: Create the scorers object
 const scorers = {};
 
-// Step 2: Iterate over the scored array to populate the scorers object
+// &Step 2: Iterate over the scored array to populate the scorers object
 for (const player of game.scored) {
-  // If the player is already in the scorers object, increment the count
-  // Otherwise, add the player to the scorers object with a count of 1
+  // &If the player is already in the scorers object, increment the count
+  // &Otherwise, add the player to the scorers object with a count of 1
   scorers[player] = (scorers[player] || 0) + 1;
 }
 
-// Step 3: Print the scorers object
+// &Step 3: Print the scorers object
 console.log(scorers);
 
-// 11. Sets
+// &11. Sets
 
 const orderSet = new Set([
   'Pasta',
@@ -572,26 +572,26 @@ console.log(orderSet.has('Pizza'));
 console.log(orderSet.has('Bread'));
 orderSet.add('Garlic Bread');
 orderSet.delete('Risotto');
-// orderSet.clear();
+// &orderSet.clear();
 console.log(orderSet);
 
 for (const order of orderSet) console.log(order);
 
-// Example
+// &Example
 const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
 
-// 12. Maps: Fundamentals
+// &12. Maps: Fundamentals
 
-// Using Set and Get Method
+// &Using Set and Get Method
 const resto = new Map();
 resto.set('name', 'Classico Italiano');
 resto.set(1, 'Firenze, Italy');
 console.log(resto.set(2, 'Lisbon, Portugal'));
-// rest.get(1);
+// &rest.get(1);
 console.log(resto.get(1));
-// rest.get(2);
+// &rest.get(2);
 console.log(resto.get(2));
 
 resto
@@ -613,8 +613,8 @@ resto.delete(2);
 console.log(resto);
 resto.set(document.querySelector('h1'), 'Heading');
 console.log(resto.size);
-// rest.clear();
-// console.log(rest.size);
+// &rest.clear();
+// &console.log(rest.size);
 
 const arr2 = [1, 2];
 resto.set(arr2, 'Test');
@@ -623,7 +623,7 @@ console.log(resto.size);
 
 console.log(resto.get(arr2));
 
-// Maps Iteration
+// &Maps Iteration
 const question = new Map([
   ['question', 'What is the best programming language?'],
   [1, 'C'],
@@ -635,27 +635,27 @@ const question = new Map([
 ]);
 console.log(question);
 
-// Convert object to map
+// &Convert object to map
 console.log(Object.entries(openingHours2));
 const hoursMap = new Map(Object.entries(openingHours2));
 console.log(hoursMap);
 
-// Quiz App
+// &Quiz App
 console.log(question.get('question'));
 for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
 }
-// const answer = Number(prompt('Your answer'));
+// &const answer = Number(prompt('Your answer'));
 const answer = 3;
 console.log(question.get(answer === question.get('correct')));
 
-// Convert map to array
+// &Convert map to array
 console.log([...question]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
 console.log([...question.entries()]);
-// question.clear();
-// console.log([...question]);
+// &question.clear();
+// &console.log([...question]);
 /*
 The Complete JavaScript Course 18
 Coding Challenge #3
@@ -690,40 +690,40 @@ const gameEvents = new Map([
   [90, '🔶 Yellow card'],
 ]);
 
-const events = [...new Set(gameEvents.values())]; // sets
+const events = [...new Set(gameEvents.values())]; // &sets
 console.log(events);
-gameEvents.delete(64); // delete method
+gameEvents.delete(64); // &delete method
 console.log(gameEvents);
-// console.log(gameEvents.size);
+// &console.log(gameEvents.size);
 console.log(
   `An event happened, on average, every ${90 / gameEvents.size} minutes`
 );
-// console.log(gameEvents.keys());
-// console.log(gameEvents.values());
-// console.log(gameEvents.entries());
+// &console.log(gameEvents.keys());
+// &console.log(gameEvents.values());
+// &console.log(gameEvents.entries());
 for (const [min, event] of gameEvents) {
   const half = min <= 45 ? 'FIRST' : 'SECOND';
   console.log(`[${half} HALF] ${min}: ${event}`);
 }
-// console.log(gameEvents);
-// console.log(gameEvents.get(17));
-// console.log(gameEvents.get(36));
-// console.log(gameEvents.get(47));
-// console.log(gameEvents.get(61));
-// console.log(gameEvents.get(64));
+// &console.log(gameEvents);
+// &console.log(gameEvents.get(17));
+// &console.log(gameEvents.get(36));
+// &console.log(gameEvents.get(47));
+// &console.log(gameEvents.get(61));
+// &console.log(gameEvents.get(64));
 
-// 13. Working with Strings - Part 1
+// &13. Working with Strings - Part 1
 
 const airline = 'TAP Air Portugal';
 const plane = 'A320';
-// console.log(plane[0]);
-// console.log(plane[1]);
-// console.log(plane[2]);
-// console.log('B737'[0]);
+// &console.log(plane[0]);
+// &console.log(plane[1]);
+// &console.log(plane[2]);
+// &console.log('B737'[0]);
 console.log(airline.length);
 console.log('B737'.length);
-// console.log('B737'.charAt(0));
-// console.log('B737'.charAt(1));
+// &console.log('B737'.charAt(0));
+// &console.log('B737'.charAt(1));
 
 console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
@@ -736,7 +736,7 @@ console.log(airline.slice(-2));
 console.log(airline.slice(1, -1));
 
 const checkMiddleSeat = function (seat) {
-  // B and E are middle seats
+  // &B and E are middle seats
   const s = seat.slice(-1);
   if (s === 'B' || s === 'E') console.log('You got the middle seat 😬');
   else console.log('You got lucky 😎');
@@ -745,26 +745,26 @@ checkMiddleSeat('11B');
 checkMiddleSeat('23C');
 checkMiddleSeat('3E');
 
-// 14. Working with Strings - Part 2
+// &14. Working with Strings - Part 2
 
 console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
-// console.log(airline[0].toUpperCase());
+// &console.log(airline[0].toUpperCase());
 
-// Fix capitalization in name
-const passenger = 'jOnAS'; // Jonas
+// &Fix capitalization in name
+const passenger = 'jOnAS'; // &Jonas
 const passengerLower = passenger.toLowerCase();
 const passengerCorrect =
   passengerLower[0].toUpperCase() + passengerLower.slice(1);
 console.log(passengerCorrect);
-// console.log(passenger[0].toUpperCase() + passenger.slice(1));
-// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1));
-// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
-// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
-// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
-// console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
+// &console.log(passenger[0].toUpperCase() + passenger.slice(1));
+// &console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1));
+// &console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
+// &console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
+// &console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
+// &console.log(passenger.slice(0, 1).toUpperCase() + passenger.slice(1).
 
-// Comparing emails
+// &Comparing emails
 const email = 'shahid@gmail.com';
 const loginEmail = ' Hello.io';
 const lowerEmail = loginEmail.toLowerCase();
@@ -772,7 +772,7 @@ const trimmedEmail = lowerEmail.trim();
 console.log(trimmedEmail);
 console.log(email === trimmedEmail);
 
-// Replacing
+// &Replacing
 const priceGB = '288,97£';
 const priceUS = priceGB.replace('£', '$').replace(',', '.');
 console.log(priceUS);
@@ -781,10 +781,10 @@ const announcement =
   'All passengers come to boarding door 23. Boarding door 23!';
 console.log(announcement.replace('door', 'gate'));
 
-// Regular Expression
+// &Regular Expression
 console.log(announcement.replace(/door/g, 'gate'));
 
-// Booleans
+// &Booleans
 const plane2 = 'Airbus A320neo';
 console.log(plane2.includes('A320'));
 console.log(plane2.startsWith('Airb'));
@@ -793,12 +793,12 @@ console.log(plane2.endsWith('neo'));
 if (plane2.startsWith('Airbus') && plane2.endsWith('neo')) {
   console.log('Part of the NEW Airbus family');
 }
-// console.log(plane2.startsWith('Airbus') && plane2.endsWith('neo'));
-// console.log(plane2.startsWith('Airbus') || plane2.endsWith('neo'));
-// console.log(plane2.startsWith('Airbus') || plane2.endsWith('neo'));
-// console.log(plane2.startsWith('Airbus') || plane2.endsWith('neo'));
+// &console.log(plane2.startsWith('Airbus') && plane2.endsWith('neo'));
+// &console.log(plane2.startsWith('Airbus') || plane2.endsWith('neo'));
+// &console.log(plane2.startsWith('Airbus') || plane2.endsWith('neo'));
+// &console.log(plane2.startsWith('Airbus') || plane2.endsWith('neo'));
 
-// Practice exercise
+// &Practice exercise
 const checkBaggage = function (items) {
   const baggage = items.toLowerCase();
   if (baggage.includes('knife') || baggage.includes('gun')) {
@@ -812,15 +812,15 @@ checkBaggage('I have a laptop, some Food and a pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and a gun for protection');
 
-// 15. Working with Strings - Part 3
+// &15. Working with Strings - Part 3
 
-// Split and Join
+// &Split and Join
 console.log('a+very+nice+string'.split('+'));
 console.log('Shahid Khan'.split(' '));
-// ['a', 'very', 'nice', 'string']
+// &['a', 'very', 'nice', 'string']
 const [firstName, lastName] = 'Shahid Khan'.split(' ');
 console.log(firstName, lastName);
-// ['Shahid', 'Khan']
+// &['Shahid', 'Khan']
 const message = 'Add 5 to 5';
 console.log(message.split(' '));
 
@@ -835,18 +835,18 @@ const capitalizeName = function (name) {
   const names = name.split(' ');
   const namesUpper = [];
   for (const n of names) {
-    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    // &namesUpper.push(n[0].toUpperCase() + n.slice(1));
     namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
   }
   console.log(namesUpper.join(' '));
 };
 capitalizeName('shahid khan');
 
-// Padding
+// &Padding
 const message2 = 'Go to gate 23!';
 console.log(message2.padStart(25, '+').padEnd(35, '+'));
 console.log('Shahid'.padStart(25, '+').padEnd(35, '+'));
-// 'Go to gate 23!' -> '   Go to gate 23!' -> '   Go to gate 23!   '
+// &'Go to gate 23!' -> '   Go to gate 23!' -> '   Go to gate 23!   '
 
 const maskCreditCard = function (number) {
   const str = number + '';
@@ -856,7 +856,7 @@ const maskCreditCard = function (number) {
 console.log(maskCreditCard(4337857583362038));
 console.log(maskCreditCard('4337857583362038'));
 
-// Repeat
+// &Repeat
 const message3 = 'Bad weather... All Departures Delayed... ';
 console.log(message3.repeat(5));
 
@@ -895,30 +895,30 @@ you're stuck. Then pause and continue!
 Afterwards, test with your own test data!
 GOOD LUCK 😀 */
 
-// document.body.append(document.createElement('textarea'));
-// document.body.append(document.createElement('button'));
+// &document.body.append(document.createElement('textarea'));
+// &document.body.append(document.createElement('button'));
 
-// document.querySelector('button').addEventListener('click', function () {
-//   const text = document.querySelector('textarea').value;
-//   const rows = text.split('\n');
-//   for (const [i, row] of rows.entries()) {
-//     const [first, second] = row.toLowerCase().trim().split('_');
-//     const output = `${first}${second.replace(
-//       second[0],
-//       second[0].toUpperCase()
-//     )}`;
-//     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
-//   }
-// });
+// &document.querySelector('button').addEventListener('click', function () {
+// &  const text = document.querySelector('textarea').value;
+// &  const rows = text.split('\n');
+// &  for (const [i, row] of rows.entries()) {
+// &    const [first, second] = row.toLowerCase().trim().split('_');
+// &    const output = `${first}${second.replace(
+// &      second[0],
+// &      second[0].toUpperCase()
+// &    )}`;
+// &    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+// &  }
+// &});
 
-// 16. String Methods Practice
+// &16. String Methods Practice
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-// 🔴 Delayed Departure from FAO to TXL (11h25)
-//              Arrival from BRU to FAO (11h45)
-//   🔴 Delayed Arrival from HEL to FAO (12h05)
-//            Departure from FAO to LIS (12h30)
+// &🔴 Delayed Departure from FAO to TXL (11h25)
+// &             Arrival from BRU to FAO (11h45)
+// &  🔴 Delayed Arrival from HEL to FAO (12h05)
+// &           Departure from FAO to LIS (12h30)
 
 const getCode = str => str.slice(0, 3).toUpperCase();
 
@@ -934,4 +934,4 @@ for (const flight of flights.split('+')) {
   console.log(output);
 }
 
-// that's all!
+// &that's all!

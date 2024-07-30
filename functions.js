@@ -12,7 +12,7 @@ document.querySelector('#app').innerHTML = `
   </div>
 `;
 
-// Functions - Higher order functions, bind methods and A Closer Look at Functions
+// &Functions - Higher order functions, bind methods and A Closer Look at Functions
 /* IMP FOR INTERVIEW 
 What is functional programming in javascript and what are the topics it includes
 ChatGPT
@@ -46,7 +46,7 @@ javascript
 Copy code
 const greet = () => 'Hello';
 const sayHello = greet;
-console.log(sayHello());  // 'Hello'
+console.log(sayHello());  // &'Hello'
 5. Function Composition
 Definition: Combining two or more functions to produce a new function.
 Example:
@@ -56,7 +56,7 @@ const compose = (f, g) => (x) => f(g(x));
 const addOne = (x) => x + 1;
 const double = (x) => x * 2;
 const addOneAndDouble = compose(double, addOne);
-console.log(addOneAndDouble(2));  // 6
+console.log(addOneAndDouble(2));  // &6
 6. Currying
 Definition: Transforming a function that takes multiple arguments into a series of functions that each take a single argument.
 Example:
@@ -64,14 +64,14 @@ javascript
 Copy code
 const add = (a) => (b) => a + b;
 const addFive = add(5);
-console.log(addFive(3));  // 8
+console.log(addFive(3));  // &8
 7. Recursion
 Definition: A function that calls itself to solve smaller instances of the same problem.
 Example:
 javascript
 Copy code
 const factorial = (n) => n === 0 ? 1 : n * factorial(n - 1);
-console.log(factorial(5));  // 120
+console.log(factorial(5));  // &120
 8. Declarative Programming
 Definition: Writing code that expresses the logic of a computation without describing its control flow.
 Example:
@@ -85,7 +85,7 @@ Example:
 javascript
 Copy code
 let count = 0;
-const increment = () => count += 1;  // has a side effect on `count`
+const increment = () => count += 1;  // &has a side effect on `count`
 10. Laziness
 Definition: Delaying the evaluation of an expression until its value is needed.
 Example:
@@ -95,20 +95,20 @@ const lazy = () => {
   console.log('Evaluated');
   return 42;
 };
-const x = lazy;  // `lazy` is not called here
-console.log(x());  // 'Evaluated' and then 42
+const x = lazy;  // &`lazy` is not called here
+console.log(x());  // &'Evaluated' and then 42
 11. Functors and Monads
 Definition: Structures that represent computations. Functors allow for the application of functions over wrapped values, and Monads provide a way to chain computations together.
 Example (Functor):
 javascript
 Copy code
 const array = [1, 2, 3];
-const mappedArray = array.map(x => x * 2);  // Array is a functor
+const mappedArray = array.map(x => x * 2);  // &Array is a functor
 Example (Monad):
 javascript
 Copy code
 const promise = Promise.resolve(42);
-promise.then(x => x + 1).then(console.log);  // Promise is a monad
+promise.then(x => x + 1).then(console.log);  // &Promise is a monad
 These topics form the foundation of functional programming in JavaScript, promoting code that is more predictable, easier to test, and more modular.
 
 does these topics Higher-order functions, bind methods and A Closer Look at Functions are in FP  
@@ -124,7 +124,7 @@ javascript
 Copy code
 const map = (arr, fn) => arr.map(fn);
 const numbers = [1, 2, 3];
-const doubled = map(numbers, x => x * 2);  // [2, 4, 6]
+const doubled = map(numbers, x => x * 2);  // &[2, 4, 6]
 2. Bind Methods
 Definition: The bind method in JavaScript is used to create a new function that, when called, has its this value set to a specific value, and optionally, prepends arguments to the function call.
 
@@ -140,7 +140,7 @@ const person = {
 };
 
 const greetAlice = person.greet.bind(person);
-greetAlice();  // Hello, Alice
+greetAlice();  // &Hello, Alice
 3. A Closer Look at Functions
 This typically refers to understanding the properties and behaviors of functions in JavaScript. This includes:
 
@@ -148,8 +148,8 @@ Function Declarations vs. Expressions:
 
 javascript
 Copy code
-function add(a, b) { return a + b; }  // Function Declaration
-const multiply = function(a, b) { return a * b; };  // Function Expression
+function add(a, b) { return a + b; }  // &Function Declaration
+const multiply = function(a, b) { return a * b; };  // &Function Expression
 Arrow Functions:
 
 javascript
@@ -164,13 +164,13 @@ const makeCounter = () => {
   return () => ++count;
 };
 const counter = makeCounter();
-console.log(counter());  // 1
-console.log(counter());  // 2
+console.log(counter());  // &1
+console.log(counter());  // &2
 Function Scope and Hoisting:
 
 javascript
 Copy code
-console.log(x);  // undefined
+console.log(x);  // &undefined
 var x = 5;
 First-Class Functions: Functions are treated as first-class citizens.
 
@@ -178,24 +178,24 @@ javascript
 Copy code
 const greet = name => `Hello, ${name}`;
 const greetPerson = greet;
-console.log(greetPerson('Alice'));  // Hello, Alice
+console.log(greetPerson('Alice'));  // &Hello, Alice
 In summary, these concepts are indeed part of functional programming and are crucial for writing clean, efficient, and maintainable code. They help in leveraging the power of functions and immutability, which are key principles of functional programming.
 */
 
-// Default Parameters
-// ES6 introduced default parameters for functions, allowing you to set default values for parameters that are not provided by the caller.
-// Default parameters are useful when you want to define a default value for a function parameter if no argument is passed or if the argument is undefined.
+// &Default Parameters
+// &ES6 introduced default parameters for functions, allowing you to set default values for parameters that are not provided by the caller.
+// &Default parameters are useful when you want to define a default value for a function parameter if no argument is passed or if the argument is undefined.
 
 const bookings = [];
 
 const createBooking = function (
   flightNum,
-  numPassengers = 1, // ES6
+  numPassengers = 1, // &ES6
   price = 199 * numPassengers
 ) {
-  // ES5
-  // numPassengers = numPassengers || 1;
-  // price = price || 199;
+  // &ES5
+  // &numPassengers = numPassengers || 1;
+  // &price = price || 199;
 
   const booking = {
     flightNum,
@@ -213,8 +213,8 @@ createBooking('LH123', 5);
 
 createBooking('LH123', undefined, 1000);
 
-// How Passing Arguments Works: Value vs. Reference
-// How Passing Arguments Works: Values vs. Reference
+// &How Passing Arguments Works: Value vs. Reference
+// &How Passing Arguments Works: Values vs. Reference
 const flight = 'LH234';
 const jonas = {
   name: 'Jonas Schmedtmann',
@@ -232,13 +232,13 @@ const checkIn = function (flightNum, passenger) {
   }
 };
 
-// checkIn(flight, jonas);
-// console.log(flight);
-// console.log(jonas);
+// &checkIn(flight, jonas);
+// &console.log(flight);
+// &console.log(jonas);
 
-// Is the same as doing...
-// const flightNum = flight;
-// const passenger = jonas;
+// &Is the same as doing...
+// &const flightNum = flight;
+// &const passenger = jonas;
 
 const newPassport = function (person) {
   person.passport = Math.trunc(Math.random() * 100000000000);
@@ -247,8 +247,8 @@ const newPassport = function (person) {
 newPassport(jonas);
 checkIn(flight, jonas);
 
-// First-Class and Higher-Order Functions
-// Functions Accepting Callback Functions
+// &First-Class and Higher-Order Functions
+// &Functions Accepting Callback Functions
 const oneWord = function (str) {
   return str.replace(/ /g, '').toLowerCase();
 };
@@ -258,7 +258,7 @@ const upperFirstWord = function (str) {
   return [first.toUpperCase(), ...others].join(' ');
 };
 
-// Higher-order function
+// &Higher-order function
 const transformer = function (str, fn) {
   console.log(`Original string: ${str}`);
   console.log(`Transformed string: ${fn(str)}`);
@@ -266,17 +266,17 @@ const transformer = function (str, fn) {
   console.log(`Transformed by: ${fn.name}`);
 };
 
-transformer('JavaScript is the best!', upperFirstWord); // Here upperFirstWord is a Call back Function
-transformer('JavaScript is the best!', oneWord); // Here oneWord is a Call back Function
+transformer('JavaScript is the best!', upperFirstWord); // &Here upperFirstWord is a Call back Function
+transformer('JavaScript is the best!', oneWord); // &Here oneWord is a Call back Function
 
-// JS uses callbacks all the time
+// &JS uses callbacks all the time
 const high5 = function () {
   console.log('👋');
-}; // Here high5 is a Normal or Lower-order function
-document.body.addEventListener('click', high5); // Here addEventListener is a Higher-order function whereas high5 is also a Call back Function
+}; // &Here high5 is a Normal or Lower-order function
+document.body.addEventListener('click', high5); // &Here addEventListener is a Higher-order function whereas high5 is also a Call back Function
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
 
-// Functions Returning Functions ---------IMP
+// &Functions Returning Functions ---------IMP
 const greet = function (greeting) {
   return function (name) {
     console.log(`${greeting} ${name}`);
@@ -289,18 +289,18 @@ greeterHey('Steven');
 
 greet('Hello')('Jonas');
 
-// Challenge
+// &Challenge
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArr('Hi')('Jonas');
 
-// The call and apply Methods
+// &The call and apply Methods
 
 const lufthansa = {
   airline: 'Lufthansa',
   iataCode: 'LH',
   bookings: [],
-  // book: function() {}
+  // &book: function() {}
   book(flightNum, name) {
     console.log(
       `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
@@ -320,10 +320,10 @@ const eurowings = {
 
 const book = lufthansa.book;
 
-// Does NOT work
-// book(23, 'Sarah Williams');
+// &Does NOT work
+// &book(23, 'Sarah Williams');
 
-// Call method --- Good but not better then Bind Method
+// &Call method --- Good but not better then Bind Method
 book.call(eurowings, 23, 'Sarah Williams');
 console.log(eurowings);
 
@@ -338,16 +338,16 @@ const swiss = {
 
 book.call(swiss, 583, 'Mary Cooper');
 
-// Apply method ----too old
+// &Apply method ----too old
 const flightData = [583, 'George Cooper'];
 book.apply(swiss, flightData);
 console.log(swiss);
 
-book.call(swiss, ...flightData); // Better and new way to use call method instead of apply method
+book.call(swiss, ...flightData); // &Better and new way to use call method instead of apply method
 console.log(swiss);
 
-// The bind Method
-// book.call(eurowings, 23, 'Sarah Williams');
+// &The bind Method
+// &book.call(eurowings, 23, 'Sarah Williams');
 
 const bookEW = book.bind(eurowings);
 const bookLH = book.bind(lufthansa);
@@ -356,11 +356,11 @@ const bookLX = book.bind(swiss);
 bookEW(23, 'Steven Williams');
 bookLH(23, 'Steven Williams');
 
-const bookEW23 = book.bind(eurowings, 23); // Partial application - setting a default value
+const bookEW23 = book.bind(eurowings, 23); // &Partial application - setting a default value
 bookEW23('Jonas Schmedtmann');
 bookEW23('Martha Cooper');
 
-// With Event Listeners
+// &With Event Listeners
 lufthansa.planes = 300;
 lufthansa.buyPlane = function () {
   console.log(this);
@@ -368,24 +368,24 @@ lufthansa.buyPlane = function () {
   this.planes++;
   console.log(this.planes);
 };
-// lufthansa.buyPlane();
+// &lufthansa.buyPlane();
 
-// document
-//   .querySelector('.buy')
-//   .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+// &document
+// &  .querySelector('.buy')
+// &  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 
-// Partial application
+// &Partial application
 
 const addTax = (rate, value) => value + value * rate;
 console.log(addTax(0.1, 200));
 
 const addVAT = addTax.bind(null, 0.23);
-// addVAT = value => value + value * 0.23;
+// &addVAT = value => value + value * 0.23;
 
 console.log(addVAT(100));
 console.log(addVAT(23));
 
-// Old way with same result
+// &Old way with same result
 
 const addTaxRate = function (rate) {
   return function (value) {
@@ -439,10 +439,10 @@ GOOD LUCK 😀
 const poll = {
   question: 'What is your favourite programming language?',
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
-  // This generates [0, 0, 0, 0]. More in the next section 😃
+  // &This generates [0, 0, 0, 0]. More in the next section 😃
   answers: new Array(4).fill(0),
   registerNewAnswer() {
-    // Get answer
+    // &Get answer
     const answer = Number(
       prompt(
         `${this.question}\n${this.options.join('\n')}\n(Write option number)`
@@ -450,7 +450,7 @@ const poll = {
     );
     console.log(answer);
 
-    // Register answer using Short Circuiting
+    // &Register answer using Short Circuiting
     typeof answer === 'number' &&
       answer < this.answers.length &&
       this.answers[answer]++;
@@ -463,7 +463,7 @@ const poll = {
     if (type === 'array') {
       console.log(this.answers);
     } else if (type === 'string') {
-      // Poll results are 13, 2, 4, 1
+      // &Poll results are 13, 2, 4, 1
       console.log(`Poll results are ${this.answers.join(', ')}`);
     }
   },
@@ -471,38 +471,38 @@ const poll = {
 
 document
   .querySelector('.poll')
-  .addEventListener('click', poll.registerNewAnswer.bind(poll)); // We use bind method bz this has only scope upto defined object
+  .addEventListener('click', poll.registerNewAnswer.bind(poll)); // &We use bind method bz this has only scope upto defined object
 
-poll.displayResults.call({ answers: [5, 2, 3] }, 'string'); // Here we use call method in order to create a new array bz displayResults use this.answer which refers to answers array.
+poll.displayResults.call({ answers: [5, 2, 3] }, 'string'); // &Here we use call method in order to create a new array bz displayResults use this.answer which refers to answers array.
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
 poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 
-// [5, 2, 3]
-// [1, 5, 3, 9, 6, 1]
+// &[5, 2, 3]
+// &[1, 5, 3, 9, 6, 1]
 
-// IIFE - Immediately Invoked Function Expressions
+// &IIFE - Immediately Invoked Function Expressions
 
 const runOnce = function () {
   console.log('This will never run again');
 };
 runOnce();
 
-// IIFE
+// &IIFE
 (function () {
   console.log('This will never run again');
 })();
 
 (() => console.log('This will ALSO never run again'))();
-// Why we use IIFE
-// 1. Data privacy
-// 2. Block scope
+// &Why we use IIFE
+// &1. Data privacy
+// &2. Block scope
 {
   const isPrivate = 23;
   var notPrivate = 46;
 }
-// console.log(isPrivate);
+// &console.log(isPrivate);
 
-// Closures
+// &Closures
 const secureBooking = function () {
   let passengerCount = 0;
 
@@ -520,8 +520,8 @@ booker();
 
 console.dir(booker);
 
-// More Closure Examples
-// Example 1
+// &More Closure Examples
+// &Example 1
 let f;
 
 const g = function () {
@@ -542,12 +542,12 @@ g();
 f();
 console.dir(f);
 
-// Re-assigning f function
+// &Re-assigning f function
 h();
 f();
 console.dir(f);
 
-// Example 2
+// &Example 2
 const boardPassengers = function (n, wait) {
   const perGroup = n / 3;
 
@@ -562,7 +562,7 @@ const boardPassengers = function (n, wait) {
 const perGroup = 1000;
 boardPassengers(180, 3);
 
-// Coding Challenge #2
+// &Coding Challenge #2
 
 /* 
 This is more of a thinking challenge than a coding challenge 🤓
@@ -579,8 +579,8 @@ GOOD LUCK 😀
   const header = document.querySelector('h1');
   header.style.color = 'red';
 
-  document.querySelector('body').addEventListener('click', function () // call back function {
-    header.style.color = 'blue'; // This happens bz of Closure such that this call back function gets access to the header.style.color variable
+  document.querySelector('body').addEventListener('click', function () // &call back function {
+    header.style.color = 'blue'; // &This happens bz of Closure such that this call back function gets access to the header.style.color variable
   });
 })();
 */
