@@ -65,7 +65,7 @@ console.log(Person.prototype.isPrototypeOf(Person));
 
 // .prototyeOfLinkedObjects
 
-// Adding Properties to the constructor function using a prototype
+// Adding Properties(Outside Properties) to the constructor function using a prototype
 Person.prototype.species = 'Homo Sapiens';
 console.log(jonas.species, matilda.species);
 
