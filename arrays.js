@@ -11,6 +11,7 @@ document.querySelector('#app').innerHTML = `
     <h3>This development environment contains JavaScript problem-solving exercises for practice.</h3>
   </div>
 `;
+('use strict');
 
 // Working with Arrays
 

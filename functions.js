@@ -12,6 +12,8 @@ document.querySelector('#app').innerHTML = `
   </div>
 `;
 
+('use strict');
+
 // Functions - Higher order functions, bind methods and A Closer Look at Functions
 /* IMP FOR INTERVIEW 
 What is functional programming in javascript and what are the topics it includes

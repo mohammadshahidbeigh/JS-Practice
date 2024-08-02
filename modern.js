@@ -12,6 +12,8 @@ document.querySelector('#app').innerHTML = `
   </div>
 `;
 
+('use strict');
+
 // Data Structures, Modern Operators and Strings
 // 1. Destructuring Arrays
 const restaurant = {

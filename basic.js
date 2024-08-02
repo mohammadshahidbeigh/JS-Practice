@@ -12,6 +12,8 @@ document.querySelector('#app').innerHTML = `
   </div>
 `;
 
+('use strict');
+
 // First Basic Program
 
 let Js = 'Pro Shahid';

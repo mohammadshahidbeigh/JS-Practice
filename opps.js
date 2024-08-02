@@ -489,7 +489,7 @@ class PersonCl2 {
 class StudentCl extends PersonCl2 {
   constructor(fullName, birthYear, course) {
     // Always needs to happen first!
-    super(fullName, birthYear);
+    super(fullName, birthYear); // super class to call the parent class
     this.course = course;
   }
 
