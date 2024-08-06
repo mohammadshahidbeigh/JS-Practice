@@ -3,7 +3,7 @@
 Welcome! My name is Shahid. This repository contains a development environment for practicing JavaScript problem-solving exercises.
 
 ## Sequence of the Topics
-1. Basic.js - JavaScript Fundamentals
+1. # Basic.js - JavaScript Fundamentals
 2. ## Modern.js - Data Structures, Modern Operators and Strings
 3. ## Functions.js - A Closer Look at Functions
 4. ## Arrays.js - Working With Arrays
