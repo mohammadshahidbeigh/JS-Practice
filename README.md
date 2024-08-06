@@ -2,14 +2,14 @@
 
 Welcome! My name is Shahid. This repository contains a development environment for practicing JavaScript problem-solving exercises.
 
-## Sequence of the Practice
+## Sequence of the Topics
 1. ## Basic.js - JavaScript Fundamentals
 2. ## Modern.js - Data Structures, Modern Operators and Strings
 3. ## Functions.js - A Closer Look at Functions
 4. ## Arrays.js - Working With Arrays
 5. ## OOP's.js - Object-Oriented Programming (OOP) With JavaScript
 6. ## Aysnc.js - Asynchronous JavaScript Promises, AsyncAwait, and AJAX
-7. ## CleanCode.js - Modern JavaScript Development Modules, Tooling, and Functional
+7. ## Clean.js - Modern JavaScript Development Modules, Tooling, and Functional
 
 ## Table of Contents
 - [Introduction](#introduction)
