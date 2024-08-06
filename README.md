@@ -1,4 +1,4 @@
-# JavaScript Problem Solving Practice
+# JavaScript Problem Solving Practicee
 
 Welcome! My name is Shahid. This repository contains a development environment for practicing JavaScript problem-solving exercises.
 
